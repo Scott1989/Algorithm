@@ -9,7 +9,7 @@ namespace Sort
     /// <summary>
     /// 选择排序，每次查找数组中的无序部分的最小者，将其放置数据有序部分的结尾处
     /// </summary>
-    class SelectionSort:ISort
+    public class SelectionSort:ISort
     {
         public void Sort(IComparable[] a)
         {
@@ -24,10 +24,11 @@ namespace Sort
                     if (Less(a[j], min))
                     {
                         minIndex = j;
+                        min = a[j];
                     }
                 }
 
-                Exch(a, i, minIndex);
+                if (i != minIndex) Exch(a, i, minIndex);
             }
         }
     }

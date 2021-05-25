@@ -2,3 +2,10 @@
 *.dll
 *.pdb
 *.exe
+.vs/Algorithm/v16/.suo
+Algorithm/bin/Debug/net5.0/Algorithm.runtimeconfig.dev.json
+*.json
+*.props
+*.cache
+*.cache
+*.cache

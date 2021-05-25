@@ -12,14 +12,16 @@ namespace Algorithm
         static void Main(string[] args)
         {
               List<int> result = RandomGeneration.GenerateInt(50);
-              IComparable[] testList1 = new IComparable[result.Count];
-              IComparable[] testList2 = new IComparable[result.Count];
+              IComparable[] testList_BubbleSort = new IComparable[result.Count];
+              IComparable[] testList_QuickSort = new IComparable[result.Count];
+              IComparable[] testList_SelectionSort = new IComparable[result.Count];
 
-            for (int i = 0; i < testList1.Length; i++)
+            for (int i = 0; i < testList_BubbleSort.Length; i++)
                {
                    TestData test = new TestData(result[i]%50);
-                   testList1[i] = test;
-                   testList2[i] = test;
+                    testList_BubbleSort[i] = test;
+                    testList_QuickSort[i] = test;
+                    testList_SelectionSort[i] = test;
             }
    
 
@@ -31,19 +33,26 @@ namespace Algorithm
             }*/
 
             BubbleSort bubbleSort = new BubbleSort();
-            bubbleSort.Show(testList1);
-            bubbleSort.Sort(testList1);
-            bubbleSort.Show(testList1);
-
-            bool isSorted = bubbleSort.IsSorted(testList1);
-            Console.WriteLine("BubbleSort IsSorted: " + isSorted);
-            Console.ReadLine();
+            Console.WriteLine("BubbleSort begin.");
+            bubbleSort.Show(testList_BubbleSort);
+            bubbleSort.Sort(testList_BubbleSort);
+            bubbleSort.Show(testList_BubbleSort);
+            Console.WriteLine("BubbleSort end.");
 
             QuickSort quickSort = new QuickSort();
-            quickSort.Sort(testList2);
-            quickSort.Show(testList2);
-      //      bool isSorted = quickSort.IsSorted(testList2);
-        //    Console.WriteLine("QuickSort  IsSorted: " + isSorted);
+            Console.WriteLine("QuickSort begin.");
+            quickSort.Sort(testList_QuickSort);
+            quickSort.Show(testList_QuickSort);
+            Console.WriteLine("QuickSort end.");
+            //      bool isSorted = quickSort.IsSorted(testList2);
+            //    Console.WriteLine("QuickSort  IsSorted: " + isSorted);
+
+
+            SelectionSort selectSort = new Sort.SelectionSort();
+            Console.WriteLine("SelectionSort begin.");
+            selectSort.Sort(testList_SelectionSort);
+            selectSort.Show(testList_SelectionSort);
+            Console.WriteLine("SelectionSort end.");
             Console.ReadLine();
 
         }
