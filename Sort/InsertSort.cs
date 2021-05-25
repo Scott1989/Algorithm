@@ -10,7 +10,7 @@ namespace Sort
     /// 插入排序
     /// 每当插入元素a[i]，认为[0, i-1]有序，找到对应的插入位置，并将大于a[i]的元素后移
     /// </summary>
-    class InsertSort : ISort
+    public class InsertSort : ISort
     {
         public void Sort(IComparable[] a)
         {
@@ -32,7 +32,7 @@ namespace Sort
                 //将[j+1，i-1]的元素后移一个位置
                 for (int m = i - 1; m > j; m--)
                 {
-                    a[m] = a[m - 1];
+                    a[m+1] = a[m];
                 }
 
                 a[j] = current;

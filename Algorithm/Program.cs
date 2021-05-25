@@ -15,6 +15,7 @@ namespace Algorithm
               IComparable[] testList_BubbleSort = new IComparable[result.Count];
               IComparable[] testList_QuickSort = new IComparable[result.Count];
               IComparable[] testList_SelectionSort = new IComparable[result.Count];
+              IComparable[] testList_InsertSort = new IComparable[result.Count];
 
             for (int i = 0; i < testList_BubbleSort.Length; i++)
                {
@@ -22,6 +23,7 @@ namespace Algorithm
                     testList_BubbleSort[i] = test;
                     testList_QuickSort[i] = test;
                     testList_SelectionSort[i] = test;
+                    testList_InsertSort[i] = test;
             }
    
 
@@ -53,6 +55,14 @@ namespace Algorithm
             selectSort.Sort(testList_SelectionSort);
             selectSort.Show(testList_SelectionSort);
             Console.WriteLine("SelectionSort end.");
+            Console.ReadLine();
+
+
+            InsertSort insertSort = new Sort.InsertSort();
+            Console.WriteLine("InsertSort begin.");
+            insertSort.Sort(testList_InsertSort);
+            insertSort.Show(testList_InsertSort);
+            Console.WriteLine("InsertSort end.");
             Console.ReadLine();
 
         }
