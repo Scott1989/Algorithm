@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Algorithm/1.0.0": {
+        "dependencies": {
+          "Sort": "1.0.0",
+          "StdRandom": "1.0.0"
+        },
+        "runtime": {
+          "Algorithm.dll": {}
+        }
+      },
+      "Sort/1.0.0": {
+        "runtime": {
+          "Sort.dll": {}
+        }
+      },
+      "StdRandom/1.0.0": {
+        "runtime": {
+          "StdRandom.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Algorithm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sort/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StdRandom/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

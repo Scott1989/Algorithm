@@ -1,0 +1,186 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj",
+        "projectName": "Algorithm",
+        "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj",
+        "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj": {
+                "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj"
+              },
+              "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj": {
+                "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj",
+        "projectName": "Sort",
+        "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj",
+        "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj",
+        "projectName": "StdRandom",
+        "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj",
+        "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
