@@ -29,13 +29,19 @@ namespace Sort
                     }
                 }
 
+                //i所在的元素比前面的元素大，无需调整
+                if (j == (i-1))
+                {
+                    continue;
+                }
+
                 //将[j+1，i-1]的元素后移一个位置
                 for (int m = i - 1; m > j; m--)
                 {
                     a[m+1] = a[m];
                 }
 
-                a[j] = current;
+                a[j+1] = current;
             }
         }
     }

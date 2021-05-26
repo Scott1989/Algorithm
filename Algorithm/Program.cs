@@ -59,13 +59,13 @@ namespace Algorithm
             Console.WriteLine("SelectionSort end.");
            
 
-/*
+
             InsertSort insertSort = new Sort.InsertSort();
             Console.WriteLine("InsertSort begin.");
             insertSort.Sort(testList_InsertSort);
             insertSort.Show(testList_InsertSort);
             Console.WriteLine("InsertSort end.");
-*/         
+        
 
             HeapSort heapSort = new HeapSort();
             Console.WriteLine("HeapSort begin.");

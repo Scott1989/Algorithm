@@ -43,7 +43,7 @@ namespace Sort
             int begin = lo, end = hi;
             IComparable pivot = a[lo];
 
-            while (true)
+            while (begin < end)
             {
                 //右半部查找，找到第一个小于等于pivot的数据
                 while (lo < end && Bigger(a[end], pivot))
@@ -67,8 +67,6 @@ namespace Sort
                 {
                     a[end] = a[begin];
                 }
-                //两个索引相遇，说明切分结束
-                if (begin >= end) break;
             }
 
             a[end] = pivot;
