@@ -15,20 +15,20 @@ namespace Sort
         public void Sort(IComparable[] a)
         {
            int N = a.Length;
-           IntervalMergeSort(a, 0, N-1);
+           Sort(a, 0, N-1);
         }
 
 
         /// <summary>
         /// 采用递归的方式，将数据对半切分进行同类排序，最后将其合并为大的有序数组
         /// </summary>
-        private void IntervalMergeSort(IComparable[] a, int begin, int end)
+        private void Sort(IComparable[] a, int begin, int end)
         {
             if (begin == end) return;
 
             int mid = begin + (end - begin) / 2;
-            IntervalMergeSort(a, begin, mid);
-            IntervalMergeSort(a, mid+1, end);
+            Sort(a, begin, mid);
+            Sort(a, mid+1, end);
             Merge(a, begin, mid, end);
         }
 
