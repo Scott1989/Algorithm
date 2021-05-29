@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
+    /// <summary>
+    /// 合并排序
+    /// 排序思想：合并排序采用分治方法，对数组左半边使用合并排序，对数据右边使用合并排序，两边都有序后再合并成新的大有序数组
+    /// </summary>
     public class MergeSort : ISort
     {
         public void Sort(IComparable[] a)
@@ -15,6 +19,9 @@ namespace Sort
         }
 
 
+        /// <summary>
+        /// 采用递归的方式，将数据对半切分进行同类排序，最后将其合并为大的有序数组
+        /// </summary>
         private void IntervalMergeSort(IComparable[] a, int begin, int end)
         {
             if (begin == end) return;
@@ -26,8 +33,9 @@ namespace Sort
         }
 
 
-
-        ///[i, j] [j+1, k]的数据进行有序合并
+        /// <summary>
+        /// [i, j] [j+1, k]的数据进行有序合并
+        /// </summary>
         private void Merge(IComparable[] a, int i, int j, int k)
         {
             if (j == k) return;
@@ -56,7 +64,7 @@ namespace Sort
                 }
             }
 
-            //左边序列还有剩余
+            //左边序列还有剩余，补充到临时缓冲区中
             if (leftIndex <= j)
             {
                 for(int m = leftIndex; m <= j; m++)
@@ -66,7 +74,7 @@ namespace Sort
                 }
             }
 
-            //右边序列还有剩余
+            //右边序列还有剩余，补充到临时缓冲区中
             if (rightIndex <= k)
             {
                 for(int m = rightIndex; m <= k; m++)

@@ -8,7 +8,7 @@ namespace Sort
 {
     /// <summary>
     /// 插入排序
-    /// 每当插入元素a[i]，认为[0, i-1]有序，找到对应的插入位置，并将大于a[i]的元素后移
+    /// 排序思想：每当插入元素a[i]，认为[0, i-1]有序，在其中找到a[i]的插入位置，并将大于a[i]的元素后移
     /// </summary>
     public class InsertSort : ISort
     {
@@ -23,13 +23,14 @@ namespace Sort
                 int j = i - 1;
                 for (; j >= 0; j--)
                 {
+                    //找到第一个小于a[i]元素的位置，a[i]应插入到j后面，及放置到j+1位置
                     if (Less(a[j], current))
                     {
                         break;
                     }
                 }
 
-                //i所在的元素比前面的元素大，无需调整
+                //i所在的元素比前面的元素大，无需调整，直接进行下一轮插入操作
                 if (j == (i-1))
                 {
                     continue;
