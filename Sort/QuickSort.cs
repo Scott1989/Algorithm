@@ -8,8 +8,8 @@ namespace Sort
 {
     /// <summary>
     /// 快速排序
-    /// 选取一个中间数M，比其小的数转移致M左边，比其大的数转移致M右边
-    /// 再分别对数组左、右两个分区采用该方法，递归执行
+    /// 排序思想：选取一个中间数M，比其小的数转移致M左边，比其大的数转移致M右边
+    /// 再分别对数组左、右两个分区采用相同方法，递归执行
     /// </summary>
     public class QuickSort:ISort
     {
@@ -23,7 +23,7 @@ namespace Sort
             if (hi <= lo) return;
 
             //取排序区间的中间部分
-             int k = Partition(a, lo, hi);
+             int k = Partition_2(a, lo, hi);
         
             //对数据进行分区，比mid大的放左边，比mid大的放右边
             Sort(a, lo, k-1);
@@ -41,36 +41,67 @@ namespace Sort
         private int Partition(IComparable[] a, int lo, int hi)
         {
             int begin = lo, end = hi;
-            IComparable pivot = a[lo];
+            IComparable pivot = a[lo];  //将数组第一个元素作为分区的基准
+            int markIndex = lo + 1;
 
-            while (begin < end)
+            for(int i = markIndex; i <= hi; i++)
+            {
+                if (Less(a[i], pivot))
+                {
+                    Exch(a, i, markIndex);
+                    markIndex++;
+                }
+            }
+
+            markIndex--;
+            Exch(a, lo, markIndex);
+            return markIndex;
+        }
+
+          /// <summary>
+        /// 将数组进行分区，根据数组的第一个数字，进行切分
+        /// 将小于的数字放左边，大于的数字放右边
+        /// </summary>
+        /// <param name="a">数组</param>
+        /// <param name="lo">数组最左边下表</param>
+        /// <param name="hi">数组最右边下表</param>
+        /// <returns></returns>
+        private int Partition_2(IComparable[] a, int lo, int hi)
+        {
+            if (lo == hi) return lo;
+
+            IComparable pivot = a[lo];  //将数组第一个元素作为分区的基准
+            int begin = lo+1, end = hi;
+        
+            while (begin <= end)
             {
                 //右半部查找，找到第一个小于等于pivot的数据
-                while (lo < end && Bigger(a[end], pivot))
+                while (end >= lo && Bigger(a[end], pivot))
                 {
                     end--;
                 }
 
-                //找到右边小于等于pivot的数值，放到左边的空位
-                if (end > begin)
-                {
-                    a[begin] = a[end];
-                }
                 //左半部查找，找到第一个大于pivot的数据
-                while (begin < hi && !Bigger(a[begin], pivot))
+                while (begin <= hi && !Bigger(a[begin], pivot))
                 {
                     begin++;
                 }
 
                 //找到左边大于pivot的数组，放到右边的空位
-                if (end > begin)
+                if (end > begin) 
                 {
-                    a[end] = a[begin];
+                    Exch(a, begin, end);
+                    begin++;
+                    end--;
+                    Show(a);
                 }
             }
 
-            a[end] = pivot;
+            //将end指向的数据和lo位置的数据进行交换
+            Exch(a, end, lo);
             return end;
         }
+
+
     }
 }

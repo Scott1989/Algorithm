@@ -11,7 +11,7 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
-              List<int> result = RandomGeneration.GenerateInt(30);
+              List<int> result = RandomGeneration.GenerateInt(100);
               IComparable[] testList_BubbleSort = new IComparable[result.Count];
               IComparable[] testList_QuickSort = new IComparable[result.Count];
               IComparable[] testList_SelectionSort = new IComparable[result.Count];
@@ -22,7 +22,7 @@ namespace Algorithm
 
             for (int i = 0; i < testList_BubbleSort.Length; i++)
                {
-                   TestData test = new TestData(result[i]%30);
+                   TestData test = new TestData(result[i]%100);
                     testList_BubbleSort[i] = test;
                     testList_QuickSort[i] = test;
                     testList_SelectionSort[i] = test;
