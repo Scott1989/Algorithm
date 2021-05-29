@@ -11,21 +11,24 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
-              List<int> result = RandomGeneration.GenerateInt(50);
+              List<int> result = RandomGeneration.GenerateInt(30);
               IComparable[] testList_BubbleSort = new IComparable[result.Count];
               IComparable[] testList_QuickSort = new IComparable[result.Count];
               IComparable[] testList_SelectionSort = new IComparable[result.Count];
               IComparable[] testList_InsertSort = new IComparable[result.Count];
               IComparable[] testList_HeapSort = new IComparable[result.Count];
+              IComparable[] testList_MergeSort = new IComparable[result.Count];
+              
 
             for (int i = 0; i < testList_BubbleSort.Length; i++)
                {
-                   TestData test = new TestData(result[i]%50);
+                   TestData test = new TestData(result[i]%30);
                     testList_BubbleSort[i] = test;
                     testList_QuickSort[i] = test;
                     testList_SelectionSort[i] = test;
                     testList_InsertSort[i] = test;
                     testList_HeapSort[i] = test;
+                    testList_MergeSort[i] = test;
             }
    
 
@@ -48,9 +51,6 @@ namespace Algorithm
             quickSort.Sort(testList_QuickSort);
             quickSort.Show(testList_QuickSort);
             Console.WriteLine("QuickSort end.");
-            //      bool isSorted = quickSort.IsSorted(testList2);
-            //    Console.WriteLine("QuickSort  IsSorted: " + isSorted);
-
 
             SelectionSort selectSort = new Sort.SelectionSort();
             Console.WriteLine("SelectionSort begin.");
@@ -72,6 +72,16 @@ namespace Algorithm
             heapSort.Sort(testList_InsertSort);
             heapSort.Show(testList_InsertSort);
             Console.WriteLine("HeapSort end.");
+
+
+            MergeSort mergeSort = new MergeSort();
+            Console.WriteLine("MergeSort begin.");
+            mergeSort.Sort(testList_MergeSort);
+            mergeSort.Show(testList_MergeSort);
+            Console.WriteLine("MergeSort end.");
+     
+
+
             Console.ReadLine();
 
 
