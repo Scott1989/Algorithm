@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StdDraw", "StdDraw\StdDraw.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StdRandom", "StdRandom\StdRandom.csproj", "{65E5E319-0C1D-48A3-B83D-631E37F850B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ST", "ST\ST.csproj", "{5A686C90-F93B-441C-8D93-7CDA24389A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST", "ST\ST.csproj", "{5A686C90-F93B-441C-8D93-7CDA24389A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{A80D0A99-D526-47A4-8712-6C82990D0C0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{5A686C90-F93B-441C-8D93-7CDA24389A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A686C90-F93B-441C-8D93-7CDA24389A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A686C90-F93B-441C-8D93-7CDA24389A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80D0A99-D526-47A4-8712-6C82990D0C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80D0A99-D526-47A4-8712-6C82990D0C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80D0A99-D526-47A4-8712-6C82990D0C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80D0A99-D526-47A4-8712-6C82990D0C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
