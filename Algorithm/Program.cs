@@ -1,4 +1,4 @@
-﻿using AlgorithmSort;
+﻿using Algorithm.Sort;
 using StdRandom;
 using System;
 using System.Collections;
@@ -18,6 +18,7 @@ namespace Algorithm
               IComparable[] testList_InsertSort = new IComparable[result.Count];
               IComparable[] testList_HeapSort = new IComparable[result.Count];
               IComparable[] testList_MergeSort = new IComparable[result.Count];
+              IComparable[] testList_ShellSort = new IComparable[result.Count];
               
 
             for (int i = 0; i < testList_BubbleSort.Length; i++)
@@ -29,6 +30,7 @@ namespace Algorithm
                     testList_InsertSort[i] = test;
                     testList_HeapSort[i] = test;
                     testList_MergeSort[i] = test;
+                    testList_ShellSort[i] = test;
             }
    
 
@@ -52,7 +54,7 @@ namespace Algorithm
             quickSort.Show(testList_QuickSort);
             Console.WriteLine("QuickSort end.");
 
-            SelectionSort selectSort = new AlgorithmSort.SelectionSort();
+            SelectionSort selectSort = new SelectionSort();
             Console.WriteLine("SelectionSort begin.");
             selectSort.Sort(testList_SelectionSort);
             selectSort.Show(testList_SelectionSort);
@@ -60,7 +62,7 @@ namespace Algorithm
            
 
 
-            InsertSort insertSort = new AlgorithmSort.InsertSort();
+            InsertSort insertSort = new InsertSort();
             Console.WriteLine("InsertSort begin.");
             insertSort.Sort(testList_InsertSort);
             insertSort.Show(testList_InsertSort);
@@ -80,7 +82,11 @@ namespace Algorithm
             mergeSort.Show(testList_MergeSort);
             Console.WriteLine("MergeSort end.");
      
-
+            ShellSort shellSort = new ShellSort();
+            Console.WriteLine("ShellSort begin.");
+            mergeSort.Sort(testList_MergeSort);
+            mergeSort.Show(testList_MergeSort);
+            Console.WriteLine("ShellSort end.");
 
             Console.ReadLine();
 
