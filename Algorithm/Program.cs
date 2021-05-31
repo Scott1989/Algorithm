@@ -1,4 +1,4 @@
-﻿using Sort;
+﻿using AlgorithmSort;
 using StdRandom;
 using System;
 using System.Collections;
@@ -52,7 +52,7 @@ namespace Algorithm
             quickSort.Show(testList_QuickSort);
             Console.WriteLine("QuickSort end.");
 
-            SelectionSort selectSort = new Sort.SelectionSort();
+            SelectionSort selectSort = new AlgorithmSort.SelectionSort();
             Console.WriteLine("SelectionSort begin.");
             selectSort.Sort(testList_SelectionSort);
             selectSort.Show(testList_SelectionSort);
@@ -60,7 +60,7 @@ namespace Algorithm
            
 
 
-            InsertSort insertSort = new Sort.InsertSort();
+            InsertSort insertSort = new AlgorithmSort.InsertSort();
             Console.WriteLine("InsertSort begin.");
             insertSort.Sort(testList_InsertSort);
             insertSort.Show(testList_InsertSort);
