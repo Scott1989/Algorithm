@@ -56,7 +56,7 @@ namespace Algorithm.Sort
 
                     IComparable tmp = a[i];
                     int m = i;
-                    while(Less(a[m], a[m-gap]))
+                    while(Less(tmp, a[m-gap]))
                     {
                         a[m] = a[m-gap];
                         m -= gap;

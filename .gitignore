@@ -11,7 +11,6 @@ Algorithm/bin/Debug/net5.0/Algorithm.runtimeconfig.dev.json
 *.csproj.nuget.g.targets
 *.AssemblyInfo.cs
 *.csproj.FileListAbsolute.txt
-ST/obj/Debug/net5.0/ST.csproj.FileListAbsolute.txt
 ST/obj/Debug/net5.0/ST.GeneratedMSBuildEditorConfig.editorconfig
 StdDraw/obj/Debug/net5.0/StdDraw.csproj.FileListAbsolute.txt
 StdDraw/obj/Debug/net5.0/StdDraw.csprojAssemblyReference.cache

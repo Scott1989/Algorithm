@@ -19,30 +19,19 @@ namespace Algorithm.Sort
             {
                 IComparable current = a[i];
                 
+                //若a[i] >= a[i-1],那么现在是有序的，无需调整
+                if (!Less(a[i], a[i-1])) continue;
+
                 //找到a[i]的插入位置j
-                int j = i - 1;
-                for (; j >= 0; j--)
+                int j = i;
+                IComparable tmp = a[i];
+                while(j-1 >= 0 && Less(tmp, a[j-1]))
                 {
-                    //找到第一个小于a[i]元素的位置，a[i]应插入到j后面，及放置到j+1位置
-                    if (Less(a[j], current))
-                    {
-                        break;
-                    }
+                    a[j] = a[j-1];
+                    j--;
                 }
 
-                //i所在的元素比前面的元素大，无需调整，直接进行下一轮插入操作
-                if (j == (i-1))
-                {
-                    continue;
-                }
-
-                //将[j+1，i-1]的元素后移一个位置
-                for (int m = i - 1; m > j; m--)
-                {
-                    a[m+1] = a[m];
-                }
-
-                a[j+1] = current;
+                a[j] = tmp;
             }
         }
     }
