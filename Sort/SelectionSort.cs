@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 选择排序，每次查找数组中的无序部分的最小者，将其放置数据有序部分的结尾处

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 插入排序

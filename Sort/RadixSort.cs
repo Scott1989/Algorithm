@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort
+namespace Algorithm.Sort
 {
+    //基数排序
     class RadixSort
     {
     }
