@@ -8,23 +8,26 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\xu_wenping\\.nuget\\packages\\": {},
+    "C:\\Users\\xuwen\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdDraw\\StdDraw.csproj",
+      "projectUniqueName": "E:\\GithubRepo\\Algorithm\\StdDraw\\StdDraw.csproj",
       "projectName": "StdDraw",
-      "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdDraw\\StdDraw.csproj",
-      "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdDraw\\obj\\",
+      "projectPath": "E:\\GithubRepo\\Algorithm\\StdDraw\\StdDraw.csproj",
+      "packagesPath": "C:\\Users\\xuwen\\.nuget\\packages\\",
+      "outputPath": "E:\\GithubRepo\\Algorithm\\StdDraw\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\xuwen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -32,6 +35,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

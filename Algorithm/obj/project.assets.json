@@ -12,6 +12,16 @@
           "bin/placeholder/Sort.dll": {}
         }
       },
+      "ST/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ST.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ST.dll": {}
+        }
+      },
       "StdRandom/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -30,6 +40,11 @@
       "path": "../Sort/Sort.csproj",
       "msbuildProject": "../Sort/Sort.csproj"
     },
+    "ST/1.0.0": {
+      "type": "project",
+      "path": "../ST/ST.csproj",
+      "msbuildProject": "../ST/ST.csproj"
+    },
     "StdRandom/1.0.0": {
       "type": "project",
       "path": "../StdRandom/StdRandom.csproj",
@@ -38,28 +53,32 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ST >= 1.0.0",
       "Sort >= 1.0.0",
       "StdRandom >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xu_wenping\\.nuget\\packages\\": {},
+    "C:\\Users\\xuwen\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj",
+      "projectUniqueName": "E:\\GithubRepo\\Algorithm\\Algorithm\\Algorithm.csproj",
       "projectName": "Algorithm",
-      "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\Algorithm.csproj",
-      "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Algorithm\\obj\\",
+      "projectPath": "E:\\GithubRepo\\Algorithm\\Algorithm\\Algorithm.csproj",
+      "packagesPath": "C:\\Users\\xuwen\\.nuget\\packages\\",
+      "outputPath": "E:\\GithubRepo\\Algorithm\\Algorithm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\xuwen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,17 +86,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj": {
-              "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Sort\\Sort.csproj"
+            "E:\\GithubRepo\\Algorithm\\Sort\\Sort.csproj": {
+              "projectPath": "E:\\GithubRepo\\Algorithm\\Sort\\Sort.csproj"
             },
-            "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj": {
-              "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\StdRandom\\StdRandom.csproj"
+            "E:\\GithubRepo\\Algorithm\\StdRandom\\StdRandom.csproj": {
+              "projectPath": "E:\\GithubRepo\\Algorithm\\StdRandom\\StdRandom.csproj"
+            },
+            "E:\\GithubRepo\\Algorithm\\ST\\ST.csproj": {
+              "projectPath": "E:\\GithubRepo\\Algorithm\\ST\\ST.csproj"
             }
           }
         }
@@ -106,7 +129,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

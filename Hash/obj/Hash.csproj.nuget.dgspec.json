@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Hash\\Hash.csproj": {}
+    "E:\\GithubRepo\\Algorithm\\Hash\\Hash.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Hash\\Hash.csproj": {
+    "E:\\GithubRepo\\Algorithm\\Hash\\Hash.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Hash\\Hash.csproj",
+        "projectUniqueName": "E:\\GithubRepo\\Algorithm\\Hash\\Hash.csproj",
         "projectName": "Hash",
-        "projectPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Hash\\Hash.csproj",
-        "packagesPath": "C:\\Users\\xu_wenping\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xu_wenping\\Desktop\\repos\\Algorithm\\Hash\\obj\\",
+        "projectPath": "E:\\GithubRepo\\Algorithm\\Hash\\Hash.csproj",
+        "packagesPath": "C:\\Users\\xuwen\\.nuget\\packages\\",
+        "outputPath": "E:\\GithubRepo\\Algorithm\\Hash\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\xu_wenping\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xuwen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "E:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

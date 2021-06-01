@@ -9,3 +9,15 @@ C:\Users\xuwen\source\repos\Algorithm\Hash\obj\Debug\net5.0\Hash.csproj.CoreComp
 C:\Users\xuwen\source\repos\Algorithm\Hash\obj\Debug\net5.0\Hash.dll
 C:\Users\xuwen\source\repos\Algorithm\Hash\obj\Debug\net5.0\ref\Hash.dll
 C:\Users\xuwen\source\repos\Algorithm\Hash\obj\Debug\net5.0\Hash.pdb
+E:\GithubRepo\Algorithm\Hash\bin\Debug\net5.0\Hash.deps.json
+E:\GithubRepo\Algorithm\Hash\bin\Debug\net5.0\Hash.dll
+E:\GithubRepo\Algorithm\Hash\bin\Debug\net5.0\ref\Hash.dll
+E:\GithubRepo\Algorithm\Hash\bin\Debug\net5.0\Hash.pdb
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.csprojAssemblyReference.cache
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.GeneratedMSBuildEditorConfig.editorconfig
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.AssemblyInfoInputs.cache
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.AssemblyInfo.cs
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.csproj.CoreCompileInputs.cache
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.dll
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\ref\Hash.dll
+E:\GithubRepo\Algorithm\Hash\obj\Debug\net5.0\Hash.pdb

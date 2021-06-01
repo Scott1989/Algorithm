@@ -22,3 +22,15 @@ C:\Users\xu_wenping\Desktop\repos\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom
 C:\Users\xu_wenping\Desktop\repos\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.dll
 C:\Users\xu_wenping\Desktop\repos\Algorithm\StdRandom\obj\Debug\net5.0\ref\StdRandom.dll
 C:\Users\xu_wenping\Desktop\repos\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.pdb
+E:\GithubRepo\Algorithm\StdRandom\bin\Debug\net5.0\StdRandom.deps.json
+E:\GithubRepo\Algorithm\StdRandom\bin\Debug\net5.0\StdRandom.dll
+E:\GithubRepo\Algorithm\StdRandom\bin\Debug\net5.0\ref\StdRandom.dll
+E:\GithubRepo\Algorithm\StdRandom\bin\Debug\net5.0\StdRandom.pdb
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.csprojAssemblyReference.cache
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.GeneratedMSBuildEditorConfig.editorconfig
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.AssemblyInfoInputs.cache
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.AssemblyInfo.cs
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.csproj.CoreCompileInputs.cache
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.dll
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\ref\StdRandom.dll
+E:\GithubRepo\Algorithm\StdRandom\obj\Debug\net5.0\StdRandom.pdb

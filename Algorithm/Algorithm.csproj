@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Sort\Sort.csproj" />
     <ProjectReference Include="..\StdRandom\StdRandom.csproj" />
+    <ProjectReference Include="..\ST\ST.csproj" />
   </ItemGroup>
 
 </Project>

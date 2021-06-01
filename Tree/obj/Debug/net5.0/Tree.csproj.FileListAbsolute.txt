@@ -10,3 +10,15 @@ C:\Users\xuwen\source\repos\Algorithm\Tree\obj\Debug\net5.0\Tree.csproj.CoreComp
 C:\Users\xuwen\source\repos\Algorithm\Tree\obj\Debug\net5.0\Tree.dll
 C:\Users\xuwen\source\repos\Algorithm\Tree\obj\Debug\net5.0\ref\Tree.dll
 C:\Users\xuwen\source\repos\Algorithm\Tree\obj\Debug\net5.0\Tree.pdb
+E:\GithubRepo\Algorithm\Tree\bin\Debug\net5.0\Tree.deps.json
+E:\GithubRepo\Algorithm\Tree\bin\Debug\net5.0\Tree.dll
+E:\GithubRepo\Algorithm\Tree\bin\Debug\net5.0\ref\Tree.dll
+E:\GithubRepo\Algorithm\Tree\bin\Debug\net5.0\Tree.pdb
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.csprojAssemblyReference.cache
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.GeneratedMSBuildEditorConfig.editorconfig
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.AssemblyInfoInputs.cache
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.AssemblyInfo.cs
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.csproj.CoreCompileInputs.cache
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.dll
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\ref\Tree.dll
+E:\GithubRepo\Algorithm\Tree\obj\Debug\net5.0\Tree.pdb

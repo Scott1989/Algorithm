@@ -1,4 +1,5 @@
 ﻿using Algorithm.Sort;
+using Algorithm.ST;
 using StdRandom;
 using System;
 using System.Collections;
@@ -90,6 +91,16 @@ namespace Algorithm
 
             Console.ReadLine();
 
+
+            SequentialSearchST<int, string> seqST = new  SequentialSearchST<int, string>();
+            
+
+            for(int i = 0; i < 10000; i++)
+            {
+                seqST.Put(i, i.ToString());
+            }
+
+            Console.ReadLine();
 
         }
     }

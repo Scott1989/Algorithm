@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Algorithm/1.0.0": {
         "dependencies": {
+          "ST": "1.0.0",
           "Sort": "1.0.0",
           "StdRandom": "1.0.0"
         },
@@ -18,6 +19,11 @@
       "Sort/1.0.0": {
         "runtime": {
           "Sort.dll": {}
+        }
+      },
+      "ST/1.0.0": {
+        "runtime": {
+          "ST.dll": {}
         }
       },
       "StdRandom/1.0.0": {
@@ -34,6 +40,11 @@
       "sha512": ""
     },
     "Sort/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ST/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

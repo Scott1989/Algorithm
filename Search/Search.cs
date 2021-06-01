@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Search
+namespace Algorithm.STSearch
 {
     public interface Search
     {

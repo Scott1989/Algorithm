@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 namespace Algorithm.Sort
 {
     //基数排序
-    class RadixSort
+    public class RadixSort:ISort
     {
+        public void Sort(IComparable[] a)
+        {
+          
+        }
+
+
     }
 }

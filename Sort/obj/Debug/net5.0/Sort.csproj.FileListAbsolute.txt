@@ -22,3 +22,15 @@ C:\Users\xu_wenping\Desktop\repos\Algorithm\Sort\obj\Debug\net5.0\Sort.csproj.Co
 C:\Users\xu_wenping\Desktop\repos\Algorithm\Sort\obj\Debug\net5.0\Sort.dll
 C:\Users\xu_wenping\Desktop\repos\Algorithm\Sort\obj\Debug\net5.0\ref\Sort.dll
 C:\Users\xu_wenping\Desktop\repos\Algorithm\Sort\obj\Debug\net5.0\Sort.pdb
+E:\GithubRepo\Algorithm\Sort\bin\Debug\net5.0\Sort.deps.json
+E:\GithubRepo\Algorithm\Sort\bin\Debug\net5.0\Sort.dll
+E:\GithubRepo\Algorithm\Sort\bin\Debug\net5.0\ref\Sort.dll
+E:\GithubRepo\Algorithm\Sort\bin\Debug\net5.0\Sort.pdb
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.csprojAssemblyReference.cache
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.GeneratedMSBuildEditorConfig.editorconfig
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.AssemblyInfoInputs.cache
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.AssemblyInfo.cs
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.csproj.CoreCompileInputs.cache
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.dll
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\ref\Sort.dll
+E:\GithubRepo\Algorithm\Sort\obj\Debug\net5.0\Sort.pdb

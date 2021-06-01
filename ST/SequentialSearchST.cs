@@ -3,7 +3,7 @@
 namespace Algorithm.ST
 {
     /// <summary>
-    /// 线性链表式的KEY-VALUE数据结构
+    /// 线性双向链表式的KEY-VALUE数据结构
     /// 1.结构中不存在重复KEY
     /// 2.每个键只对应一个值
     /// 3.插入元素时，KEY若已存在，将VALUE覆盖
@@ -23,9 +23,13 @@ namespace Algorithm.ST
         {
             public Key key { get; set; }
             public Value value { get; set; }
+
+            //Node的下一个节点的引用
             public Node next { get; set; }
+            
+            //Node的上一个节点的引用
             public Node prev { get; set; }
-             public Node(Key key, Value value, Node prev, Node next)
+            public Node(Key key, Value value, Node prev, Node next)
             {
                 this.key = key;
                 this.value = value;
@@ -34,7 +38,8 @@ namespace Algorithm.ST
             }
         }
 
-        private Node first;
+        private Node first;        //首指针，指向第一个元素
+        private Node end;          //尾指针，指向最后一个元素
         public int count { get; set; }
 
         /// <summary>
@@ -50,19 +55,45 @@ namespace Algorithm.ST
                 return;
             }
 
-            for(Node m = first; m != null; m = m.next)
+            //当前为空链表
+            if (first == null)
+            {
+                Node newNode = new Node(key, value, null, null);
+                first = newNode;
+                end = newNode;
+                count++;
+                return;
+            }
+
+            Node m = first;
+            for(; m != null; m = m.next)
             {
                 if (m.key.Equals(key))
                 {
                     m.value = value;
                     return;
                 }
+
+                //若现有节点中的KEY大于给定的KEY，终止查找
+                if (m.key.CompareTo(key) > 0)
+                {
+                    break;
+                }
             }
 
-            Node n = new Node(key, value, null, first);
-            first.prev = n;
-            first = n;
-            count++;
+            if (m != null)
+            {
+                //m前为key的插入点
+
+                Node newNode = new Node(key, value, m.prev, m);
+                m.prev.next = newNode;
+                m.prev = newNode;
+                count++;
+            }else
+            {
+                //m为NULL，新节点插入链表末尾
+
+            }
         }
 
         
@@ -79,6 +110,12 @@ namespace Algorithm.ST
                 {
                     return m.value;
                 }
+
+                //若现有节点中的KEY大于给定的KEY，终止查找
+                if (m.key.CompareTo(key) > 0)
+                {
+                    break;
+                }
             }
 
             return default(Value);
@@ -93,6 +130,12 @@ namespace Algorithm.ST
             Node prev = null;
             for(Node m = first; m != null; m = m.next)
             {
+                //若现有节点中的KEY大于给定的KEY，终止查找
+                if (m.key.CompareTo(key) > 0)
+                {
+                    break;
+                }
+
                 //查找到对应节点
                 if (key.Equals(m.key))
                 {
@@ -100,13 +143,18 @@ namespace Algorithm.ST
                     if (prev == null)
                     {
                         first = m.next;
+                        m.prev = null;
+                        m.next = null;
                         return;
                     }
 
                     //非首节点，让前节点跳过当前节点，指向下一个点
-                   prev.next = m.next;
-                   m.next.prev = prev;
-                   return;
+                    prev.next = m.next;
+                    m.next.prev = prev;
+                    m.prev = null;
+                    m.next = null;
+                   
+                    return;
                 }
 
                 prev = m;
@@ -143,19 +191,13 @@ namespace Algorithm.ST
 
         /// <summary>
         /// 返回链表中的最小KEY
+        /// 对于有序链表，返回首节点即可
         /// </summary>
         /// <returns></returns>
         public Key Min()
         {
-            Key minKey = first.key;
-            for(Node m = first.next; m != null; m = m.next)
-            {
-                if (minKey.CompareTo(m.key) > 0)
-                {
-                    minKey = m.key;
-                }
-            }
-            return minKey;
+            if (first != null) return first.key;
+            return default(Key);
         }
 
         /// <summary>
@@ -205,6 +247,7 @@ namespace Algorithm.ST
         /// <returns></returns>
         public Key Select(int k)
         {
+            if (count < k) return default(Key);
             int tick = 0;
             for(Node m = first; m != null; m = m.next)
             {
@@ -213,13 +256,12 @@ namespace Algorithm.ST
                 {
                     return m.key;
                 }
-            }
+            }   
 
-            //抛出异常  对象不存在
             return default(Key);
-                
         }
 
+        
         public void DeleteMin()
         {
             Node minRef = GetMinNode();
@@ -284,6 +326,7 @@ namespace Algorithm.ST
 
         /// <summary>
         /// 查找最大节点位置
+        /// 通用查找最大节点函数，有序、无序链表皆适用
         /// </summary>
         /// <returns></returns>
         private Node GetMaxNode()
@@ -306,6 +349,7 @@ namespace Algorithm.ST
 
         /// <summary>
         /// 查找最小节点信息
+        /// 通用查找最小节点函数，有序、无序链表皆适用
         /// </summary>
         /// <returns></returns>
         private Node GetMinNode()

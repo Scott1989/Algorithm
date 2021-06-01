@@ -10,3 +10,15 @@ C:\Users\xuwen\source\repos\Algorithm\Search\obj\Debug\net5.0\Search.csproj.Core
 C:\Users\xuwen\source\repos\Algorithm\Search\obj\Debug\net5.0\Search.dll
 C:\Users\xuwen\source\repos\Algorithm\Search\obj\Debug\net5.0\ref\Search.dll
 C:\Users\xuwen\source\repos\Algorithm\Search\obj\Debug\net5.0\Search.pdb
+E:\GithubRepo\Algorithm\Search\bin\Debug\net5.0\Search.deps.json
+E:\GithubRepo\Algorithm\Search\bin\Debug\net5.0\Search.dll
+E:\GithubRepo\Algorithm\Search\bin\Debug\net5.0\ref\Search.dll
+E:\GithubRepo\Algorithm\Search\bin\Debug\net5.0\Search.pdb
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.csprojAssemblyReference.cache
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.GeneratedMSBuildEditorConfig.editorconfig
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.AssemblyInfoInputs.cache
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.AssemblyInfo.cs
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.csproj.CoreCompileInputs.cache
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.dll
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\ref\Search.dll
+E:\GithubRepo\Algorithm\Search\obj\Debug\net5.0\Search.pdb
