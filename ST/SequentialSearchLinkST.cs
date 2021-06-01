@@ -3,7 +3,7 @@
 namespace Algorithm.ST
 {
     /// <summary>
-    /// 线性双向链表式的KEY-VALUE数据结构
+    /// 线性链表式的KEY-VALUE数据结构
     /// 1.结构中不存在重复KEY
     /// 2.每个键只对应一个值
     /// 3.插入元素时，KEY若已存在，将VALUE覆盖
@@ -13,7 +13,7 @@ namespace Algorithm.ST
     /// </summary>
     /// <typeparam name="Key">关键字</typeparam>
     /// <typeparam name="Value">值</typeparam>
-    public class SequentialSearchST<Key, Value> where Key : IComparable
+    public class SequentialSearchLinkST<Key, Value> where Key : IComparable
     {
         
         /// <summary>
@@ -39,7 +39,6 @@ namespace Algorithm.ST
         }
 
         private Node first;        //首指针，指向第一个元素
-        private Node end;          //尾指针，指向最后一个元素
         public int count { get; set; }
 
         /// <summary>
@@ -60,7 +59,6 @@ namespace Algorithm.ST
             {
                 Node newNode = new Node(key, value, null, null);
                 first = newNode;
-                end = newNode;
                 count++;
                 return;
             }
@@ -197,7 +195,15 @@ namespace Algorithm.ST
         public Key Min()
         {
             if (first != null) return first.key;
-            return default(Key);
+            Key minKey = first.key;
+            for (Node m = first.next; m != null; m = m.next)
+            {
+                if (minKey.CompareTo(m.key) > 0)
+                {
+                    minKey = m.key;
+                }
+            }
+            return minKey;
         }
 
         /// <summary>
@@ -248,6 +254,7 @@ namespace Algorithm.ST
         public Key Select(int k)
         {
             if (count < k) return default(Key);
+
             int tick = 0;
             for(Node m = first; m != null; m = m.next)
             {
