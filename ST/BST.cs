@@ -8,7 +8,8 @@ namespace Algorithm.ST
 {
     /// <summary>
     /// 基于二叉查找树结构的KEY-VALUE数据结构
-    /// key(ROOT) > key(LEFT) && key(ROOT) < key(RIGHT)
+    /// key(ROOT) > key(LEFT) && key(ROOT) < key(RIGHT)，对于左右子树，同样符合该定义
+    /// 通过中序遍历，可以输出一个升序的序列
     /// 最小元素--最左下脚元素
     /// 最大元素-最右下脚元素
     /// 1.结构中不存在重复KEY
@@ -26,9 +27,7 @@ namespace Algorithm.ST
         {
             public Key key { get; set; }
             public Value value { get; set; }
-
             public Node left { get; set; }
-
             public Node right { get; set; }
 
             public Node(Key key, Value value, Node left, Node right)
@@ -51,21 +50,22 @@ namespace Algorithm.ST
         {
             Node newNode = new Node(key, value, null, null);
 
-            //树中为空，直接插入
+            //树为空，直接插入
             if (root == null)
             {
                 root = newNode;
                 return;
             }
 
-            //根据比当前节点小，向左子树找；比当前节点大，向右子树找的规律，找插入位置
+            //比当前节点KEY小，向左子树找；比当前节点KEY大，向右子树找，寻找插入位置
             Node cur = root;
             Node parent = null;
             while(cur != null)
             {
+                //KEY已经存在，直接覆盖
                 if (cur.key.CompareTo(key) == 0)
                 {
-                    cur.key = key;
+                    cur.value = value;
                     return;
                 }else if (cur.key.CompareTo(key) < 0)
                 {
@@ -124,36 +124,95 @@ namespace Algorithm.ST
         }
 
 
+        /// <summary>
+        /// 删除指定key的节点信息，并保持二叉搜索树的定义
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public void Delete(Key key)
         {
             Node cur = root;
             Node parent = null;
+            
 
             while (cur != null)
             {
                 if (cur.key.CompareTo(key) < 0)
                 {
                     parent = cur;
-                    cur = cur.left;
+                    cur = cur.right;
+                
                 }else if (cur.key.CompareTo(key) > 0)
                 {
                     parent = cur;
-                    cur = cur.right;
-                }
-                if (cur.key.CompareTo(key) == 0)
+                    cur = cur.left;
+                
+                }else if (cur.key.CompareTo(key) == 0)
                 {
                     break;
                 }
+            }
 
-                if (cur == null) return;
+            //未找到对应节点
+            if (cur == null) return;
 
                 
-               /* if (parent != null && cur != null)
+            if (cur.left == null && cur.right == null)  //左右节点为空，将其父节点对应得引用设置为空
+            {
+                //cur为parent左节点
+                if(parent.left == cur)
                 {
-                    parent.
-                }*/
+                    parent.left = null;
+                }
+
+                //cur为parent右节点
+                if (parent.right == cur)
+                {
+                    parent.right = null;
+                }
+                
+            }else if (cur.left == null && cur.right != null) //只有右孩子节点不为空
+            {
+
+                //cur为parent左节点
+                if(parent.left == cur)
+                {
+                    parent.left = cur.right;
+                }
+
+                //cur为parent右节点
+                if (parent.right == cur)
+                {
+                    parent.right = cur.right;
+                }
+            }else if (cur.left != null && cur.right == null) //只有左孩子节点不为空
+            {
+                //cur为parent左节点
+                if(parent.left == cur)
+                {
+                    parent.left = cur.left;
+                }
+
+                //cur为parent右节点
+                if (parent.right == cur)
+                {
+                    parent.right = cur.left;
+                }
+                
+            }else   //左右子节点都不为空
+            {
+                //找到cur节点前驱节点，然后替换掉CUR，最后将对应得前驱节点删除
+                Node prevNode = GetMaxNode(cur.left);  //获取cur节点的前驱节点
+                cur.key = prevNode.key;
+                cur.value = prevNode.value;
+                prevNode = null;
             }
+      
         }
+
+
+
+
 
         /// <summary>
         /// 检查二叉查找树中是否存在指定的KEY
@@ -284,10 +343,10 @@ namespace Algorithm.ST
         /// </summary>
         /// <param name="k"></param>
         /// <returns></returns>
-        public Key Select(int k)
+ /*       public Key Select(int k)
         {
 
-        }
+        }*/
 
 
         public void DeleteMin()
