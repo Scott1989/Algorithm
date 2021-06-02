@@ -29,17 +29,20 @@ namespace Algorithm.ST
             public Value value { get; set; }
             public Node left { get; set; }
             public Node right { get; set; }
+            public int N { get; set; }   //以该节点为根的字数中，节点的数量
 
-            public Node(Key key, Value value, Node left, Node right)
+            public Node(Key key, Value value, int N, Node left, Node right)
             {
                 this.key = key;
                 this.value = value;
                 this.left = left;
                 this.right = right;
+                this.N = N;
             }
         }
 
-        private Node root;
+        
+        private Node root;  //查找二叉树根节点引用
 
         /// <summary>
         /// 将给定的KEY,VALUE数据，插入到二叉查找树中
@@ -48,9 +51,9 @@ namespace Algorithm.ST
         /// <param name="value"></param>
         public void Put(Key key, Value value)
         {
-            Node newNode = new Node(key, value, null, null);
+            Node newNode = new Node(key, value, 1, null, null);
 
-            //树为空，直接插入
+            //树为空，直接将该节点作为根节点
             if (root == null)
             {
                 root = newNode;
@@ -59,36 +62,42 @@ namespace Algorithm.ST
 
             //比当前节点KEY小，向左子树找；比当前节点KEY大，向右子树找，寻找插入位置
             Node cur = root;
-            Node parent = null;
+
+            Stack<Node> visitPath = new Stack<Node>();
             while(cur != null)
             {
-                //KEY已经存在，直接覆盖
-                if (cur.key.CompareTo(key) == 0)
+                visitPath.Push(cur);
+                if (cur.key.CompareTo(key) == 0)       //KEY已经存在，直接覆盖Value
                 {
                     cur.value = value;
                     return;
-                }else if (cur.key.CompareTo(key) < 0)
+                }else if (cur.key.CompareTo(key) < 0)  //当前节点小于KEY，去右子树
                 {
-                    parent = cur;
-                    cur = cur.right;
-                }else
+                    if (cur.right == null)
+                    {
+                        cur.right = newNode;
+                    }else
+                    {
+                        cur = cur.right;
+                    }
+                }
+                else                                                 //当前节点大于KEY，去左子树
                 {
-                    parent = cur;
-                    cur = cur.left;
+                    if (cur.left == null)
+                    {
+                        cur.left = newNode;
+                        cur.N++;
+                    }else
+                    {
+                        cur = cur.left;
+                    }
                 }
             }
 
-            //找到插入位置后，插入数据
-            if (parent.key.CompareTo(key) > 0)
+            while(visitPath.Count > 0)
             {
-                parent.left = newNode;
-                return;
-            }
-
-            if (parent.key.CompareTo(key) < 0)
-            {
-                parent.right = newNode;
-                return;
+                Node node = visitPath.Pop();
+                node.N++;
             }
         }
 
