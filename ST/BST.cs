@@ -63,10 +63,8 @@ namespace Algorithm.ST
             //比当前节点KEY小，向左子树找；比当前节点KEY大，向右子树找，寻找插入位置
             Node cur = root;
 
-            Stack<Node> visitPath = new Stack<Node>();
             while(cur != null)
             {
-                visitPath.Push(cur);
                 if (cur.key.CompareTo(key) == 0)       //KEY已经存在，直接覆盖Value
                 {
                     cur.value = value;
@@ -76,28 +74,22 @@ namespace Algorithm.ST
                     if (cur.right == null)
                     {
                         cur.right = newNode;
+                        break;
                     }else
                     {
                         cur = cur.right;
                     }
-                }
-                else                                                 //当前节点大于KEY，去左子树
+                }else                                                 //当前节点大于KEY，去左子树
                 {
                     if (cur.left == null)
                     {
                         cur.left = newNode;
-                        cur.N++;
+                        break;
                     }else
                     {
                         cur = cur.left;
                     }
                 }
-            }
-
-            while(visitPath.Count > 0)
-            {
-                Node node = visitPath.Pop();
-                node.N++;
             }
         }
 
@@ -216,11 +208,7 @@ namespace Algorithm.ST
                 cur.value = prevNode.value;
                 prevNode = null;
             }
-      
         }
-
-
-
 
 
         /// <summary>
@@ -266,17 +254,15 @@ namespace Algorithm.ST
         /// <returns></returns>
         public Key Min()
         {
-            if (IsEmpty())
-            {
-                return default(Key);
-            }
-            
-            Node minNode = GetMinNode(root);
-            if (minNode != null) return minNode.key;
-
-            return default(Key);
+            return GetMinNode(root).key;
         }
 
+
+        /// <summary>
+        /// 根据指定节点，获取以它为根的子树中的最小节点
+        /// </summary>
+        /// <param name="givenNode"></param>
+        /// <returns></returns>
         private Node GetMinNode(Node givenNode)
         {
             Node cur = givenNode;
@@ -295,20 +281,17 @@ namespace Algorithm.ST
         /// 返回最右下脚元素
         /// </summary>
         /// <returns></returns>
-        public Key Max()
+        public Key? Max()
         {
-            if (IsEmpty())
-            {
-                return default(Key);
-            }
-            Node maxNode = GetMaxNode(root);
-            if (maxNode != null) return maxNode.key;
-
-            return default(Key);
+            return GetMaxNode(root).key;
         }
 
-
-        private Node GetMaxNode(Node givenNode)
+        /// <summary>
+        /// 根据指定节点，获取以它为根的子树中的最大节点
+        /// </summary>
+        /// <param name="givenNode"></param>
+        /// <returns></returns>
+        private Node? GetMaxNode(Node givenNode)
         {
             Node cur = givenNode;
             while (cur != null)
@@ -323,28 +306,37 @@ namespace Algorithm.ST
 
 
         /// <summary>
-        /// 获取小于key的关键字数量
+        /// 获取小于key的关键字数量，有BUG
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
         public int Rank(Key key)
         {
-            int lessCount = 0;
-            Node cur = root;
+            return Rank(root, key);
+        }
 
-            while(cur != null)
+
+        /// <summary>
+        /// 从以给定节点为根的子树中，查找KEY的排名
+        /// </summary>
+        /// <param name="cur"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        private int Rank(Node cur, Key key)
+        {
+            int cmp = cur.key.CompareTo(key);
+
+            if (cmp == 0)
             {
-                if (cur.key.CompareTo(key) < 0)
-                {
-                    lessCount++;
-                    cur = cur.left;
-                }else
-                {
-                    cur = cur.left;
-                }
+                return Size(cur.left);
+            }else if (cmp < 0)
+            {
+                //cur左子树数量 + 1 + 
+                return 1 + Size(cur.left) + Rank(cur.right, key);
+            }else
+            {
+                return Rank(cur.left, key);
             }
-
-            return lessCount;
         }
 
         /// <summary>
@@ -357,65 +349,75 @@ namespace Algorithm.ST
 
         }*/
 
-
+        /// <summary>
+        /// 删除二叉查找树中的最小节点，即最左下脚节点
+        /// </summary>
         public void DeleteMin()
         {
+            if(root == null) return;
+            
             Node cur = root;
             Node parent = null;
-
             while (cur != null)
             {
-                if (cur.left != null)
+                if (cur.left == null)
+                {
+                     parent.left = null;
+                    return;
+                }else
                 {
                     parent = cur;
                     cur = cur.left;
                 }
-                else
-                {
-                    break;
-                }
-            }
-
-            //只有一个根节点
-            if (parent == null && cur != null)
-            {
-                root = null;
-            }else
-            {
-                parent.left = null;
             }
         }
 
         /// <summary>
-        /// 删除二叉查找树中的最大节点，即右下脚节点
+        /// 删除二叉查找树中的最大节点，即最右下脚节点
         /// </summary>
         public void DeleteMax()
         {
+            //树节点为空，直接返回
+            if (root == null)   return;
+
             Node cur = root;
             Node parent = null;
-
             while (cur != null)
             {
-                if (cur.right != null)
+                if(cur.right == null)
+                {
+                    parent.right = null;
+                    return;
+                }else
                 {
                     parent = cur;
                     cur = cur.right;
                 }
-                else
-                {
-                    break;
-                }
-            }
-
-            //只有一个根节点
-            if (parent == null && cur != null)
-            {
-                root = null;
-            }
-            else
-            {
-                parent.right = null;
             }
         }
+
+        public int Size()
+        {
+            root.N = Size(root);
+            return root.N;
+        }
+
+        private int Size(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            } else if (node.left == null && node.right == null)
+            {
+                node.N = 1;
+                return node.N;
+            }else
+            {
+                node.N = Size(node.left) + Size(node.right) + 1;
+                return node.N;
+            }
+        }
+
+
     }
 }
