@@ -92,13 +92,16 @@ namespace Algorithm
             Console.ReadLine();
 
 
-            SequentialSearchST<int, string> seqST = new  SequentialSearchST<int, string>();
-            
+            //       SequentialSearchST<int, string> seqST = new  SequentialSearchST<int, string>();
+            BST<int, int> bst = new BST<int, int>();     
 
-            for(int i = 0; i < 10000; i++)
+            for(int i = 0; i < 100; i++)
             {
-                seqST.Put(i, i.ToString());
+                bst.Put(i, i);
             }
+
+            int rank = bst.Rank(10);
+
 
             Console.ReadLine();
 
