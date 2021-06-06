@@ -200,62 +200,46 @@ namespace Algorithm.ST
             }
             else if (node.left == null && node.right != null) 
             {
-                //只有右孩子节点不为空，从右子树中查找node节点的后继，并替换node
-                //nextNode中没有左子树，需要那个nextNode的左子树连到其父节点上
-                Node nextNode = GetMinNode(node.right);
-                node.key = nextNode.key;
-                node.value = nextNode.value;
-
-
-                if (nextNode.parent.left == nextNode)
+                if (parent == null)
                 {
-                    nextNode.parent.left = nextNode.right;
-                    if (nextNode.right != null)
-                    {
-                        nextNode.right.parent = nextNode.parent;
-                    }
-                    nextNode.right = null;
-                }else if (nextNode.parent.right == nextNode)
+                    root = node.right;
+                }else
                 {
-                    nextNode.parent.right = nextNode.right;
-                    if (nextNode.right != null)
+                    if (parent.left == node)
                     {
-                        nextNode.right.parent = nextNode.parent;
+                        parent.left = node.right;
+                        node.right.parent = parent;
+                    }else if (parent.right == node)
+                    {
+                        parent.right = node.right;
+                        node.right.parent = parent;
                     }
-                    nextNode.right = null;
                 }
-                nextNode.parent = null;
+                node.parent = null;
+                node.right = null;
+
             }
             else if (node.left != null && node.right == null)
             {
-                //只有左孩子节点不为空，从左子树中查找node节点前驱并替换node
-                //prevNode没有右子树
-                Node prevNode = GetMaxNode(node.left);
-
-                node.key = prevNode.key;
-                node.value = prevNode.value;
-
-                if (prevNode.parent.left == prevNode)
+                if (parent == null)
                 {
-                    prevNode.parent.left = prevNode.left;
-                    if (prevNode.left != null)
-                    {
-                        prevNode.left.parent = prevNode.parent; 
-                        prevNode.left = null;
-                    }
-
+                    root = node.left;
                 }
-                else if (prevNode.parent.right == prevNode)
+                else
                 {
-                    prevNode.parent.right = prevNode.left;
-                    if (prevNode.left != null)
+                    if (parent.left == node)
                     {
-                        prevNode.left.parent = prevNode.parent;
-                        prevNode.left = null;
+                        parent.left = node.left;
+                        node.left.parent = parent;
+                    }
+                    else if (parent.right == node)
+                    {
+                        parent.right = node.left;
+                        node.left.parent = parent;
                     }
                 }
-
-                prevNode.parent = null;
+                node.parent = null;
+                node.left = null;
             }
             else   //左右子节点都不为空
             {
@@ -266,7 +250,6 @@ namespace Algorithm.ST
                 node.key = prevNode.key;
                 node.value = prevNode.value;
 
-                //需要将prevNode的父节点对应的分支设为空
                 Node prevNodeParent = prevNode.parent;
                 if (prevNodeParent.left == prevNode)
                 {
@@ -289,6 +272,8 @@ namespace Algorithm.ST
             }
         }
 
+
+       
 
 
 
