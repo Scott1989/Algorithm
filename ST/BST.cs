@@ -178,9 +178,8 @@ namespace Algorithm.ST
                 {
                     root = null;
                     return;
-                }else
+                }else  //node是非根节点，需要鞥新parent引用
                 {
-
                     if (parent.left == node)     parent.left = null;           //node为parent左节点
                     if (parent.right == node)   parent.right = null;         //cur为parent右节点
 
@@ -192,9 +191,9 @@ namespace Algorithm.ST
             {
                 if (parent == null)
                 {
+                    //node为根节点，更新root引用到孩子节点
                     root = node.right;
                     node.right.parent = null;
-                    
                 }else
                 {
                     if (parent.left == node)
@@ -236,6 +235,7 @@ namespace Algorithm.ST
             }
             else   //左右子节点都不为空
             {
+            
                 //找到node节点前驱节点，然后替换掉node，最后将对应得前驱节点删除
                 Node prevNode = GetMaxNode(node.left);  //获取cur节点的前驱节点
 
