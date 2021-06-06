@@ -178,24 +178,14 @@ namespace Algorithm.ST
                 {
                     root = null;
                     return;
-                
                 }else
                 {
-                    //node为parent左节点
-                    if (parent.left == node)
-                    {
-                        parent.left = null;
-                        node.parent = null;
-                        return;
-                    }
 
-                    //cur为parent右节点
-                    if (parent.right == node)
-                    {
-                        parent.right = null;
-                        node.parent = null;
-                        return;
-                    }
+                    if (parent.left == node)     parent.left = null;           //node为parent左节点
+                    if (parent.right == node)   parent.right = null;         //cur为parent右节点
+
+                    node.parent = null;
+                    return;
                 }
             }
             else if (node.left == null && node.right != null) 
@@ -203,6 +193,8 @@ namespace Algorithm.ST
                 if (parent == null)
                 {
                     root = node.right;
+                    node.right.parent = null;
+                    
                 }else
                 {
                     if (parent.left == node)
@@ -224,6 +216,7 @@ namespace Algorithm.ST
                 if (parent == null)
                 {
                     root = node.left;
+                    node.left.parent = null;
                 }
                 else
                 {
@@ -271,11 +264,6 @@ namespace Algorithm.ST
                 return;
             }
         }
-
-
-       
-
-
 
         /// <summary>
         /// 检查二叉查找树中是否存在指定的KEY
