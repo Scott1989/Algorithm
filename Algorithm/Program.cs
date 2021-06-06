@@ -93,14 +93,24 @@ namespace Algorithm
 
 
             //       SequentialSearchST<int, string> seqST = new  SequentialSearchST<int, string>();
-            BST<int, int> bst = new BST<int, int>();     
+            BST<int, int> bst = new BST<int, int>();
 
-            for(int i = 0; i < 100; i++)
-            {
-                bst.Put(i, i);
-            }
+            bst.Put(10, 10);
+            bst.Put(9, 9);
+            bst.Put(7, 7);
+            bst.Put(8, 8);
+            bst.Put(11, 11);
+            bst.Put(13, 13);
+            bst.Put(12, 12);
 
-            int rank = bst.Rank(10);
+
+            bst.DeleteMax();
+            bst.DeleteMax();
+            bst.DeleteMax();
+            bst.DeleteMax();
+            bst.DeleteMax();
+            bst.DeleteMax();
+            bst.DeleteMax();
 
 
             Console.ReadLine();
