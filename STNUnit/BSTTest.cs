@@ -16,15 +16,18 @@ namespace STNUnit
         {
             BST<int, int> bst = new BST<int, int>();
             bst.Put(1, 1);
+            Assert.AreEqual(bst.GetRoot(), 1);
+
             bst.Put(2, 2);
+            Assert.AreEqual(bst.GetRoot(), 1);
+
+
             bst.Put(3, 3);
             bst.Put(10, 10);
             bst.Put(9, 9);
             bst.Put(7, 7);
 
-            Assert.AreEqual(bst.Size(), 6);
-            Assert.AreEqual(bst.Max(), 10);
-            Assert.AreEqual(bst.Min(), 1);
+            Assert.AreEqual(bst.GetRoot(), 1);
 
 
        }
@@ -72,25 +75,30 @@ namespace STNUnit
             BST<int, int> bst = new BST<int, int>();
             bst.Put(1, 1);
             Assert.AreEqual(bst.Size(), 1);
+            Assert.AreEqual(bst.GetRoot(), 1);
 
             bst.Put(2, 2);
             Assert.AreEqual(bst.Size(), 2);
+            Assert.AreEqual(bst.GetRoot(), 1);
+
 
             bst.Put(3, 3);
             Assert.AreEqual(bst.Size(), 3);
+            Assert.AreEqual(bst.GetRoot(), 1);
 
 
             bst.Delete(3);
             Assert.AreEqual(bst.Contains(3), false);
             Assert.AreEqual(bst.Size(), 2);
+            Assert.AreEqual(bst.GetRoot(), 1);
 
             bst.Delete(2);
             Assert.AreEqual(bst.Contains(2), false);
             Assert.AreEqual(bst.Size(), 1);
+            Assert.AreEqual(bst.GetRoot(), 1);
 
             bst.Delete(1);
             Assert.AreEqual(bst.Contains(1), false);
-
             Assert.AreEqual(bst.IsEmpty(), true);
 
 
@@ -106,21 +114,27 @@ namespace STNUnit
 
             bst.Delete(11);
             Assert.AreEqual(bst.Contains(11), false);
+            Assert.AreEqual(bst.GetRoot(), 10);
 
             bst.Delete(13);
             Assert.AreEqual(bst.Contains(13), false);
+            Assert.AreEqual(bst.GetRoot(), 10);
 
             bst.Delete(10);
             Assert.AreEqual(bst.Contains(10), false);
+            Assert.AreEqual(bst.GetRoot(), 9);
 
             bst.Delete(9);
             Assert.AreEqual(bst.Contains(9), false);
+            Assert.AreEqual(bst.GetRoot(), 8);
 
             bst.Delete(7);
             Assert.AreEqual(bst.Contains(7), false);
+            Assert.AreEqual(bst.GetRoot(), 8);
 
             bst.Delete(8);
             Assert.AreEqual(bst.Contains(8), false);
+            Assert.AreEqual(bst.GetRoot(), 12);
 
             bst.Delete(12);
             Assert.AreEqual(bst.Contains(12), false);

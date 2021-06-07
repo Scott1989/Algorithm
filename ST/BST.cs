@@ -46,6 +46,18 @@ namespace Algorithm.ST
         
         private Node root;  //查找二叉树根节点引用
 
+
+        //获取根元素的VALUE
+        public Value GetRoot()
+        {
+            if (root != null)
+            {
+                return root.value;
+            }
+
+            return default(Value);
+        }
+
         /// <summary>
         /// 将给定的KEY,VALUE数据，插入到二叉查找树中
         /// </summary>
@@ -96,9 +108,6 @@ namespace Algorithm.ST
                     }
                 }
             }
-
-            //更新节点中N的value值
-            Size(root);
         }
 
         /// <summary>
@@ -180,8 +189,9 @@ namespace Algorithm.ST
                 if (parent == null)
                 {
                     root = null;
+                    node.parent = null;
                     return;
-                }else  //node是非根节点，需要鞥新parent引用
+                }else  //node是非根节点，需要更新parent引用
                 {
                     if (parent.left == node)     parent.left = null;           //node为parent左节点
                     if (parent.right == node)   parent.right = null;         //cur为parent右节点
@@ -196,49 +206,48 @@ namespace Algorithm.ST
                 {
                     //node为根节点，更新root引用到孩子节点
                     root = node.right;
-                    node.right.parent = null;
+                    root.parent = null;
                 }else
                 {
                     if (parent.left == node)
                     {
                         parent.left = node.right;
-                        node.right.parent = parent;
                     }else if (parent.right == node)
                     {
                         parent.right = node.right;
-                        node.right.parent = parent;
                     }
                 }
+                node.right.parent = parent;
                 node.parent = null;
                 node.right = null;
 
             }
             else if (node.left != null && node.right == null)
             {
+        
                 if (parent == null)
                 {
+                    //node为根节点
                     root = node.left;
-                    node.left.parent = null;
+                    root.parent = null;
                 }
                 else
                 {
                     if (parent.left == node)
                     {
                         parent.left = node.left;
-                        node.left.parent = parent;
                     }
                     else if (parent.right == node)
                     {
                         parent.right = node.left;
-                        node.left.parent = parent;
                     }
                 }
+                node.left.parent = parent;
                 node.parent = null;
                 node.left = null;
             }
             else   //左右子节点都不为空
-            {
-            
+            {           
                 //找到node节点前驱节点，然后替换掉node，最后将对应得前驱节点删除
                 Node prevNode = GetMaxNode(node.left);  //获取cur节点的前驱节点
 
