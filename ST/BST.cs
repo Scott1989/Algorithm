@@ -96,6 +96,9 @@ namespace Algorithm.ST
                     }
                 }
             }
+
+            //更新节点中N的value值
+            Size(root);
         }
 
         /// <summary>

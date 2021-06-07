@@ -16,24 +16,18 @@ namespace STNUnit
         {
             BST<int, int> bst = new BST<int, int>();
             bst.Put(1, 1);
-            Assert.AreEqual(bst.Rank(1), 0);
-
             bst.Put(2, 2);
-            Assert.AreEqual(bst.Rank(2), 1);
-
             bst.Put(3, 3);
-            Assert.AreEqual(bst.Rank(3), 2);
-
             bst.Put(10, 10);
-            Assert.AreEqual(bst.Rank(4), 3);
-
             bst.Put(9, 9);
-            Assert.AreEqual(bst.Rank(5), 4);
-
             bst.Put(7, 7);
-            Assert.AreEqual(bst.Rank(6), 5);
 
-        }
+            Assert.AreEqual(bst.Size(), 6);
+            Assert.AreEqual(bst.Max(), 10);
+            Assert.AreEqual(bst.Min(), 1);
+
+
+       }
 
         [Test]
         public void TestSize()
