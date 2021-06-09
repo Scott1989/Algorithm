@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace StdDraw
 {
-    class Line
+    /// <summary>
+    /// 线条类定义
+    /// </summary>
+    public class Line
     {
+        public Point start { get; set; }
+        public Point end { get; set; }
     }
 }
