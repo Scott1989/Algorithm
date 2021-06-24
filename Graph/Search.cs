@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Algorithm.Graph
 {
+    /// <summary>
+    ///  图搜索算法
+    ///  基于给定的节点进行和给定节点相关的检索功能
+    /// </summary>
     public class Search
     {
-        //起始节点
+        //起始节点编号
         private int s;
 
         //给定图
@@ -30,16 +34,12 @@ namespace Algorithm.Graph
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public bool marked(int v)
+        public bool IsConnected(int v)
         {
-            foreach(var index in g.adj[v])
+            if (g.adj[v].Contains(v))
             {
-                if (index == v)
-                {
-                    return true;
-                }
+                return true;
             }
-
             return false;
         }
 
@@ -49,7 +49,7 @@ namespace Algorithm.Graph
         /// <returns></returns>
         public int Count()
         {
-            return g.adj[s].Count();
+            return g.adj[s].Distinct().Count();
         }
     }
 }

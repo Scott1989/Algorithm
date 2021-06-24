@@ -3,15 +3,18 @@ using System.Collections.Generic;
 
 namespace Algorithm.Graph
 {
+    /// <summary>
+    /// 图类定义，无向图
+    /// </summary>
     public class Graph
     {
         /// <summary>
-        /// 图中的顶点数量
+        /// 图中顶点数量
         /// </summary>
         public int V { get; set; }
 
         /// <summary>
-        /// 图中的边数量
+        /// 图中边数量
         /// </summary>
         public int E { get; set; }
 
@@ -27,7 +30,7 @@ namespace Algorithm.Graph
             this.V = V;
             this.E = 0;
 
-            //初始化邻接矩阵
+            //初始化邻接矩阵，每一个节点对应一个链表，用于存放相连的节点信息
             adj = new List<int>[V];
             for(int i = 0; i < V; i++)
             {
@@ -40,11 +43,13 @@ namespace Algorithm.Graph
         /// </summary>
         /// <param name="v"></param>
         /// <param name="w"></param>
-        void AddEdge(int v, int w)
+        public void AddEdge(int v, int w)
         {
-            //index v对应的链表中，用于存放所有和v节点由连接关系的对端节点
-            //每条边会存放两边
+            //节点V的链表中存放对端节点w信息
             adj[v].Add(w);
+
+            //节点W的链表中存放对端节点v的信息
+            //每条边的信息存放两边
             adj[w].Add(v);
         }
 
@@ -53,10 +58,12 @@ namespace Algorithm.Graph
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        IEnumerable<int> Adj(int v)
+        public IEnumerable<int> Adj(int v)
         {
             return adj[v];
         }
+
+       
 
 
 
