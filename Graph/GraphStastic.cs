@@ -19,7 +19,7 @@ namespace Algorithm.Graph
         /// <returns></returns>
         public static int Degree(Graph g, int v)
         {
-            return g.adj[v].Distinct().Count();
+            return g.adj[v].Count();
         }
 
         public static int MaxDegree(Graph g)
