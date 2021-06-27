@@ -60,13 +60,13 @@ namespace Algorithm.Graph
         /// <param name="s">给定节点编号</param>
         public void BFS(Graph g, int s)
         {
-            Stack<int> visitRecord = new Stack<int>();
+            Queue<int> visitRecord = new Queue<int>();
 
-            visitRecord.Push(s);
+            visitRecord.Enqueue(s);
             marked[s] = true;
             while(visitRecord.Count > 0)
             {
-                int curNode = visitRecord.Pop();
+                int curNode = visitRecord.Dequeue();
                 for(int m = 0; m < g.adj[curNode].Count(); m++)
                 {
                     //该节点已经访问过，跳过
@@ -78,7 +78,7 @@ namespace Algorithm.Graph
 
                     //访问节点，并跳过
                     marked[connectedNode] = true;
-                    visitRecord.Push(connectedNode);
+                    visitRecord.Enqueue(connectedNode);
                 }
             }
         }
