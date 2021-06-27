@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Algorithm.Graph
 {
     /// <summary>
-    /// 图信息的统计方法
+    /// 图信息统计方法
     /// </summary>
     public class GraphStatistics
     {
@@ -22,11 +22,16 @@ namespace Algorithm.Graph
             return g.adj[v].Count();
         }
 
+        /// <summary>
+        /// 获取图g中所有节点的最大度数
+        /// </summary>
+        /// <param name="g"></param>
+        /// <returns></returns>
         public static int MaxDegree(Graph g)
         {
             int maxDegree = 0;
 
-            //统计每个节点的度数，并获取最大值
+            //统计每个节点的度数，并更新最大值
             for(int i = 0; i < g.V; i++)
             {
                 int curDegree = Degree(g, i);
@@ -46,14 +51,16 @@ namespace Algorithm.Graph
         /// <returns></returns>
         public static int AverageDegree(Graph g)
         {
-            int maxDegree = 0;  
+            //图中没有节点，返回0度
+            if (g.V == 0) return 0;
 
+            int sumDegree = 0;  
             for(int i = 0; i < g.V; i++)
             {
-                maxDegree += Degree(g, i);
+                sumDegree += Degree(g, i);
             }
 
-            return maxDegree / g.V;
+            return sumDegree / g.V;
         }
 
         /// <summary>

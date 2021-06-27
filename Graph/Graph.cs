@@ -18,7 +18,7 @@ namespace Algorithm.Graph
         /// </summary>
         public int E { get; set; }
 
-        //用于存放边信息的邻接矩阵
+        //用于存放边信息的邻接表
         public List<int>[] adj { get; set; }
 
         /// <summary>
@@ -62,11 +62,5 @@ namespace Algorithm.Graph
         {
             return adj[v];
         }
-
-       
-
-
-
-
     }
 }

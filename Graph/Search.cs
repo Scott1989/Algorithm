@@ -12,7 +12,7 @@ namespace Algorithm.Graph
     /// </summary>
     public class Search
     {
-        //起始节点编号
+        //源节点编号
         private int s;
 
         //给定图
@@ -21,8 +21,8 @@ namespace Algorithm.Graph
         /// <summary>
         /// 图搜索算法
         /// </summary>
-        /// <param name="g">给定的图</param>
-        /// <param name="s">给定的节点编号s</param>
+        /// <param name="g">给定图</param>
+        /// <param name="s">给定节点编号</param>
         Search(Graph g, int s)
         {
             this.g = g;
@@ -36,7 +36,7 @@ namespace Algorithm.Graph
         /// <returns></returns>
         public bool IsConnected(int v)
         {
-            if (g.adj[v].Contains(v))
+            if (g.adj[s].Contains(v))
             {
                 return true;
             }
@@ -44,7 +44,7 @@ namespace Algorithm.Graph
         }
 
         /// <summary>
-        /// 和节点s联通的节点数量
+        /// 和节点s直接联通的节点数量
         /// </summary>
         /// <returns></returns>
         public int Count()
