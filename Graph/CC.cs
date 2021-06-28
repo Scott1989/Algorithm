@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace Algorithm.Graph
 {
     /// <summary>
-    /// CC类用于统计图中的联通分量数量，以及每个联通分量中的节点编号
+    /// CC类用于统计图中的联通分量数量，及每个联通分量中的节点编号
     /// </summary>
     public class CC
     {
-        //用来标记未联通的统计此处
+        //用来标记未联通的统计此处，最终代表联通分量数量
         public int count { get; set;  }
 
         //用来存放每个节点所属的联通编号
         public int[] id { get; set; }
 
+        //参与统计的图
         public Graph g { get; set; }
 
         //是否已访问的标记数组，每一个节点都有一个标记位
@@ -32,15 +33,23 @@ namespace Algorithm.Graph
             this.g = g;
             id = new int[g.V];
             marked = new bool[g.V];
-            count = 0;  
 
             for(int i = 0; i < g.V; i++)
+            {
+                id[i] = 0;
+                marked[i] = false;
+            }
+            count = 0;
+
+            //对每个节点进行深度遍历
+            //若节点之间是联通的，DFS可以一直遍历下去，count值保持不变
+            //当count值增加时，已经遍历结束一个联通分量，开始新的联通分量遍历
+            for (int i = 0; i < g.V; i++)
             {
                 if (!marked[i])
                 {
                     count++;
                     DFS(g, i);
-
                 }
             }
         }
