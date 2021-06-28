@@ -29,13 +29,12 @@ namespace Algorithm.Graph
         private void DFS(Graph g, int s)
         {
             Stack<int> st = new Stack<int>();
-
             st.Push(s);
 
             while(st.Count > 0)
-            {
-                marked[s] = true;
+            {  
                 int curNode = st.Pop();
+                marked[curNode] = true;
 
                 for (int i = g.adj[s].Count - 1; i >= 0; i--)
                 {
