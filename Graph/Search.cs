@@ -8,9 +8,9 @@ namespace Algorithm.Graph
 {
     /// <summary>
     ///  图搜索算法
-    ///  基于给定的节点进行和给定节点相关的检索功能
+    ///  基于给定图和节点，实现图搜索功能
     /// </summary>
-    public class Search
+    public abstract class Search
     {
         //源节点编号
         public int s { get; set;}
@@ -23,6 +23,7 @@ namespace Algorithm.Graph
 
         //每个节点访问时的上一个节点
         protected int[] EdgeTo { get; set; }
+
 
         /// <summary>
         /// 图搜索算法
@@ -51,20 +52,25 @@ namespace Algorithm.Graph
         /// <returns></returns>
         public bool IsConnected(int v)
         {
-            if (g.adj[s].Contains(v))
+            //如果节点V被遍历，证明节点s可以到达节点v
+            if (marked[v])
             {
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
-        /// 和节点s直接联通的节点数量
+        /// 和节点s具有联通关系的节点数量
         /// </summary>
         /// <returns></returns>
-        public int Count()
+        public int GetConnCount()
         {
-            return g.adj[s].Distinct().Count();
+            //marked数组中true的数量，就是和节点s具有联通关系的节点数量
+            return marked.Select(m => m == true).Count();
         }
 
 
@@ -101,7 +107,7 @@ namespace Algorithm.Graph
                     path.Push(preNode);
                     m = preNode;
                 }
-
+                path.Push(s);
                 return path.ToList();
             }
             else

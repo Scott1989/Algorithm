@@ -21,6 +21,37 @@ namespace Algorithm.Graph
             DFS(g, s);
         }
 
+        /// <summary>
+        /// 借助栈，采用非递归的方式，进行图深度遍历实现
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="s"></param>
+        private void DFS(Graph g, int s)
+        {
+            Stack<int> st = new Stack<int>();
+
+            st.Push(s);
+
+            while(st.Count > 0)
+            {
+                marked[s] = true;
+                int curNode = st.Pop();
+
+                for (int i = g.adj[s].Count - 1; i >= 0; i--)
+                {
+                    int nextNode = g.adj[s][i];
+                    if (marked[nextNode])
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        EdgeTo[nextNode] = curNode;
+                        st.Push(nextNode);
+                    }
+                }
+            }
+        }
       
         /// <summary>
         /// 采用深度优先遍历算法，从起点探索所有可以达到的节点
@@ -28,10 +59,9 @@ namespace Algorithm.Graph
         /// </summary>
         /// <param name="g"></param>
         /// <param name="s"></param>
-        private void DFS(Graph g, int s)
+        private void DFSRecursive(Graph g, int s)
         {
             marked[s] = true;
-           // Count++;
 
             for(int i = 0; i < g.adj[s].Count; i++)
             {

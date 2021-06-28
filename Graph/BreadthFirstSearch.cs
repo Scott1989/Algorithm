@@ -11,9 +11,7 @@ namespace Algorithm.Graph
     /// </summary>
     public class BreadthFirstSearch:Search
     {
-  
-  //      private int Count { get; set; }
-
+ 
         /// <summary>
         /// 图搜索算法，在指定图g中，从节点s开始进行广度遍历
         /// </summary>
@@ -21,11 +19,8 @@ namespace Algorithm.Graph
         /// <param name="s">给定节点编号</param>
         public BreadthFirstSearch(Graph g, int s):base(g,s)
         {
- //           Count = 0;
             BFS(g, s);
         }
-
-     
 
         /// <summary>
         /// 图搜索算法，在指定图g中，从节点s开始进行广度遍历
@@ -45,15 +40,15 @@ namespace Algorithm.Graph
                 for(int m = 0; m < g.adj[curNode].Count(); m++)
                 {
                     //该节点已经访问过，跳过
-                    int connectedNode = g.adj[curNode][m];
-                    if (marked[connectedNode] == true)
+                    int nextNode = g.adj[curNode][m];
+                    if (marked[nextNode] == true)
                     {
                         continue;
                     }
 
                     //访问节点，并跳过
-                    marked[connectedNode] = true;
-                    visitRecord.Enqueue(connectedNode);
+                    marked[nextNode] = true;
+                    visitRecord.Enqueue(nextNode);
                 }
             }
         }
