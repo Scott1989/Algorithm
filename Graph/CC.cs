@@ -98,9 +98,9 @@ namespace Algorithm.Graph
             while (st.Count > 0)
             {
                 int curNode = st.Pop();
-                id[s] = count;
                 marked[curNode] = true;
-
+                id[s] = count;
+                
                 for (int i = g.adj[s].Count - 1; i >= 0; i--)
                 {
                     int nextNode = g.adj[s][i];

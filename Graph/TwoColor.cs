@@ -24,6 +24,7 @@ namespace Algorithm.Graph
             marked = new bool[g.V];
             color = new bool[g.V];
             IsTwoColorGraph = true;
+
             for (int i = 0; i < g.V; i++)
             {
                 marked[i] = false;
@@ -51,24 +52,33 @@ namespace Algorithm.Graph
             marked[s] = true;
             st.Push(s);
 
+            int prevNode = -1;
+            int curNode = -1;
+
             while (st.Count > 0)
             {
-                int curNode = st.Pop();
+                prevNode = curNode;
+                curNode = st.Pop();
+                marked[curNode] = true;
+
+                if (prevNode != -1)
+                {
+                     if (color[curNode] == color[prevNode])
+                        {
+                            IsTwoColorGraph = false;
+                            return;
+                        }
+                }
+
                 for (int i = g.adj[s].Count - 1; i >= 0; i--)
                 {
                     int nextNode = g.adj[s][i];
                     if (marked[nextNode])
                     {
-                        if (color[curNode] == color[nextNode])
-                        {
-                            IsTwoColorGraph = false;
-                        }
                         continue;
                     }
                     else
                     {
-                        marked[nextNode] = true;
-                        color[nextNode] = !color[curNode];
                         st.Push(nextNode);
                     }
                 }
