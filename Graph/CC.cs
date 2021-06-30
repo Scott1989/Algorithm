@@ -8,6 +8,7 @@ namespace Algorithm.Graph
 {
     /// <summary>
     /// CC类用于统计图中的联通分量数量，及每个联通分量中的节点编号
+    /// 如果从一个节点都存在一个路径到达另一个任意节点，就是连通图
     /// </summary>
     public class CC
     {

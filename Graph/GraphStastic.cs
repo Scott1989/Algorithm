@@ -14,8 +14,8 @@ namespace Algorithm.Graph
         /// <summary>
         /// 获取图g中节点v的度数，即和节点v相连的其他节点数量
         /// </summary>
-        /// <param name="g"></param>
-        /// <param name="v"></param>
+        /// <param name="g">指定图</param>
+        /// <param name="v">指定节点编号</param>
         /// <returns></returns>
         public static int Degree(Graph g, int v)
         {
@@ -31,7 +31,7 @@ namespace Algorithm.Graph
         {
             int maxDegree = 0;
 
-            //统计每个节点的度数，并更新最大值
+            //统计每个节点的度数，并将统计过程中的较大值进行记录，最后得到最大值
             for(int i = 0; i < g.V; i++)
             {
                 int curDegree = Degree(g, i);
@@ -71,6 +71,8 @@ namespace Algorithm.Graph
         public static int NumberOfSelfLoops(Graph g)
         {
             int selfLoopCount = 0;
+         
+            //若某个节点对应的邻接表中有自身的编号，说明该节点存在自环
             for(int i = 0; i < g.V; i++)
             {
                 if (g.adj[i].Contains(i))
