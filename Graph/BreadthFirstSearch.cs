@@ -50,7 +50,7 @@ namespace Algorithm.Graph
                     marked[nextNode] = true;
                     visitRecord.Enqueue(nextNode);
                 }
-            }
+            } 
         }
 
     }
