@@ -40,6 +40,23 @@ namespace Algorithm.Graph
         }
 
         /// <summary>
+        /// Graph的拷贝构造函数        
+        /// </summary>
+        /// <param name="otherG"></param>
+        public Graph(Graph otherG)
+        {
+            this.V = otherG.V;
+            this.E = otherG.E;
+            adj = new List<int>[V];
+
+            for (int i = 0; i < V; i++)
+            {
+                adj[i] = new List<int>();
+                otherG.adj[i].CopyTo(adj[i].ToArray());
+            }
+        }
+
+        /// <summary>
         /// 向图中增加一个边，边的两头节点编号是v, w
         /// 每个边的信息保存两次
         /// </summary>
@@ -52,6 +69,28 @@ namespace Algorithm.Graph
 
             //节点W的链表中存放对端节点v的信息
             adj[w].Add(v);
+
+            this.E++;
+        }
+
+        /// <summary>
+        /// 检查图中是否存在v-w边
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="w"></param>
+        /// <returns></returns>
+        public bool HasEdge(int v, int w)
+        {
+            //v-w边的两端节点编号在合理范围内
+            if (v < this.V && w < this.V)
+            {
+                if (adj[v].Contains(w))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         /// <summary>
