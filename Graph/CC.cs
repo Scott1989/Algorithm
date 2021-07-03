@@ -98,6 +98,7 @@ namespace Algorithm.Graph
 
             while (st.Count > 0)
             {
+                //对每一个出栈的元素进行遍历，并进行标记以及所属的联通分组号
                 int curNode = st.Pop();
                 marked[curNode] = true;
                 id[curNode] = count;
