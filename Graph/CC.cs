@@ -89,8 +89,8 @@ namespace Algorithm.Graph
         /// <summary>
         /// 采用非递归的深度遍历，在图中从某个节点开始进行深度遍历
         /// </summary>
-        /// <param name="g"></param>
-        /// <param name="s"></param>
+        /// <param name="g">指定要遍历的图</param>
+        /// <param name="s">指定的遍历起点</param>
         private void DFS(Graph g, int s)
         {
             Stack<int> st = new Stack<int>();
@@ -102,9 +102,9 @@ namespace Algorithm.Graph
                 marked[curNode] = true;
                 id[s] = count;
                 
-                for (int i = g.adj[s].Count - 1; i >= 0; i--)
+                for (int i = 0; i < g.adj[curNode].Count;  i++)
                 {
-                    int nextNode = g.adj[s][i];
+                    int nextNode = g.adj[curNode][i];
                     if (marked[nextNode])
                     {
                         continue;
