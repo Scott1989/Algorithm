@@ -38,7 +38,7 @@ namespace Algorithm.Graph
 
                 for (int i = g.adj[s].Count - 1; i >= 0; i--)
                 {
-                    int nextNode = g.adj[s][i];
+                    int nextNode = g.adj[curNode][i];
                     if (marked[nextNode])
                     {
                         continue;
