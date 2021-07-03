@@ -100,7 +100,7 @@ namespace Algorithm.Graph
             {
                 int curNode = st.Pop();
                 marked[curNode] = true;
-                id[s] = count;
+                id[curNode] = count;
                 
                 for (int i = 0; i < g.adj[curNode].Count;  i++)
                 {
