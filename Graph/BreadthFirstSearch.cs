@@ -31,24 +31,25 @@ namespace Algorithm.Graph
         public void BFS(Graph g, int s)
         {
             Queue<int> visitRecord = new Queue<int>();
-
             visitRecord.Enqueue(s);
-            marked[s] = true;
+          
+
             while(visitRecord.Count > 0)
             {
                 int curNode = visitRecord.Dequeue();
-                for(int m = 0; m < g.adj[curNode].Count(); m++)
+                marked[curNode] = true;
+
+                for (int m = 0; m < g.adj[curNode].Count(); m++)
                 {
                     //该节点已经访问过，跳过
                     int nextNode = g.adj[curNode][m];
                     if (marked[nextNode] == true)
                     {
                         continue;
+                    }else
+                    {
+                        visitRecord.Enqueue(nextNode);
                     }
-
-                    //访问节点，并跳过
-                    marked[nextNode] = true;
-                    visitRecord.Enqueue(nextNode);
                 }
             } 
         }
