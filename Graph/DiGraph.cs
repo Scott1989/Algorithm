@@ -32,6 +32,10 @@ namespace Algorithm.Graph
             this.V = V;
             this.E = 0;
             this.adj = new List<int>[V];
+            for (int i = 0; i < V; i++)
+            {
+                adj[i] = new List<int>();
+            }
         }
 
         /// <summary>
