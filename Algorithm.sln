@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31410.414
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithm", "Algorithm\Algorithm.csproj", "{1F05D3CD-1067-4F1F-B2BD-2C5882EB309B}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STNUnit", "STNUnit\STNUnit.csproj", "{010835EE-8BF4-4E8A-ADF1-458FA1378EB0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StdDrawTest", "StdDrawTest\StdDrawTest.csproj", "{22CDB340-AFEB-447D-A3DF-55B8AEC2B82C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphTest", "GraphTest\GraphTest.csproj", "{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{22CDB340-AFEB-447D-A3DF-55B8AEC2B82C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22CDB340-AFEB-447D-A3DF-55B8AEC2B82C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22CDB340-AFEB-447D-A3DF-55B8AEC2B82C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
