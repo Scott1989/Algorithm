@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Algorithm.Graph
 {
     /// <summary>
-    /// 有向图中是否存在有向环的检测算法
+    /// 有向图中环检测算法
     /// </summary>
     public class DirectedCycle
     {
@@ -17,7 +17,7 @@ namespace Algorithm.Graph
         //节点是否被访问过的标记位
         private bool[] marked;
 
-        //当前节点是否在遍历的栈上
+        //当前节点是否在遍历栈上的标记位
         private bool[] onStack;
 
         //环的节点序列
@@ -36,7 +36,6 @@ namespace Algorithm.Graph
             marked = new bool[g.V];
             onStack = new bool[g.V];
             EdgeTo = new int[g.V];
-            cycles = new List<int>();
             cycles = null;
             for (int i = 0; i < g.V; i++)
             {
@@ -55,7 +54,7 @@ namespace Algorithm.Graph
 
         public List<int> Cycle()
         {
-            return cycles.ToList();
+            return cycles?.ToList();
         }
 
         public bool HasCycle()
@@ -70,13 +69,14 @@ namespace Algorithm.Graph
         /// <param name="v">进行深度遍历的起点</param>
         private void DFS(DiGraph g, int v)
         {
-            //已检测到有环，不再做深度遍历
+            //环已存在，不再做深度遍历
             if (HasCycle())
             {
                 return;
             }
-            onStack[v] = true;
-            marked[v] = true;
+
+            onStack[v] = true;  //进栈
+            marked[v] = true;   //标记已访问
 
             foreach(var next in g.adj[v])
             {
@@ -88,7 +88,7 @@ namespace Algorithm.Graph
                     DFS(g, next);
                 }else
                 {
-                    //节点next已经被访问过
+                    //节点next已经被访问过，并且还在栈上
                     if (onStack[next])
                     {
                         cycles = new List<int>();
