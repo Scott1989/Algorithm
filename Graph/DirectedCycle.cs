@@ -17,8 +17,8 @@ namespace Algorithm.Graph
         //节点是否被访问过的标记位
         private bool[] marked;
 
-        //图中是否存在环
-        private bool isDirectedCycleExist { get; set; }
+        //当前节点是否在遍历的栈上
+        private bool[] onStack;
 
         //环的节点序列
         private List<int> cycles;
@@ -34,12 +34,14 @@ namespace Algorithm.Graph
         {
             this.g = g;
             marked = new bool[g.V];
+            onStack = new bool[g.V];
             EdgeTo = new int[g.V];
             cycles = new List<int>();
-            isDirectedCycleExist = false;
+            cycles = null;
             for (int i = 0; i < g.V; i++)
             {
                 marked[i] = false;
+                onStack[i] = false;
                 EdgeTo[i] = -1;
             }
 
@@ -56,9 +58,9 @@ namespace Algorithm.Graph
             return cycles.ToList();
         }
 
-        public bool IsCycleExist()
+        public bool HasCycle()
         {
-            return isDirectedCycleExist;
+            return cycles != null;
         }
 
         /// <summary>
@@ -68,61 +70,39 @@ namespace Algorithm.Graph
         /// <param name="v">进行深度遍历的起点</param>
         private void DFS(DiGraph g, int v)
         {
-            //环已经存在，不做遍历，直接返回
-            if (isDirectedCycleExist)
+            //已检测到有环，不再做深度遍历
+            if (HasCycle())
             {
                 return;
             }
+            onStack[v] = true;
+            marked[v] = true;
 
-            Stack<int>  s = new Stack<int>();
-            s.Push(v);
-
-            //栈中有数据，并且还未检测到环，进行深度遍历
-            while(s.Count > 0 && !isDirectedCycleExist)
+            foreach(var next in g.adj[v])
             {
-                int cur = s.Pop();
-                
-                if (!marked[cur])  //节点未被遍历
+                if (!marked[next]) 
                 {
-                    marked[cur] = true;
-                    foreach(int next in g.adj[cur])
+                    //节点next未被访问过，需要对齐进行深度遍历
+                    //标记v->next的路径信息
+                    EdgeTo[next] = v;
+                    DFS(g, next);
+                }else
+                {
+                    //节点next已经被访问过
+                    if (onStack[next])
                     {
-
-                        if (s.Contains(next))
+                        cycles = new List<int>();
+                        for (int x = v; x != next; x = EdgeTo[x])
                         {
-                            //节点v->m已经访问过，在后续的遍历中再次遇到m,环存在
-                            isDirectedCycleExist = true;
+                            cycles.Add(x);
                         }
-
-                        s.Push(next);
-                        EdgeTo[next] = cur;
-
-                        
-                        //确认已经存在环，停止遍历
-                        if (isDirectedCycleExist)
-                        {
-                            break;
-                        }
+                        cycles.Add(next);
+                        cycles.Add(v);
                     }
 
                 }
-                else
-                {
-                    continue;
-                }
             }
-
-            //存在环，从栈顶往下找，找到和栈顶一样的元素，环节点序列就找到
-            if (isDirectedCycleExist)
-            {
-                int top = s.Pop();
-                cycles.Add(top);
-                while(s.Peek() != top)
-                {
-                    cycles.Add(s.Pop());
-                }
-                cycles.Add(s.Pop()); 
-            }
+            onStack[v] = false;
         }
     }
 }
