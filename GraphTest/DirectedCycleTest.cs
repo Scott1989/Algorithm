@@ -47,12 +47,13 @@ namespace GraphTest
         public void IsDirectedCycleExistTest()
         {
             //0->5->4->3->2->0
-            Assert.IsTrue(dc.IsCycleExist() == true);
+            Assert.IsTrue(dc.HasCycle() == true);
 
             List<int> cycle = dc.Cycle();
             if (cycle.Count > 0)
             {
                 Assert.IsTrue(cycle[0] == cycle[cycle.Count - 1]);
+
             }
         }
 
