@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Algorithm.Sort
+namespace Algorithm.SortSpace
 {
     public  class ISort
     {

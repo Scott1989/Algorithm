@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.Sort
+namespace Algorithm.SortSpace
 {
     /// <summary>
     /// 希尔排序
