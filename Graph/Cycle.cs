@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.Graph
+namespace Algorithm.GraphSpace
 {
     /// <summary>
     /// 针对简单无向图的环检测算法

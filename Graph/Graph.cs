@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Algorithm.Graph
+namespace Algorithm.GraphSpace
 {
     /// <summary>
     ///  无向图定义

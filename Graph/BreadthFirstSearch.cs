@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Algorithm.Graph
+namespace Algorithm.GraphSpace
 {
     /// <summary>
     /// 广度优先搜索
     /// </summary>
     public class BreadthFirstSearch:Search
     {
- 
         /// <summary>
         /// 图搜索算法，在指定图g中，从节点s开始进行广度遍历
         /// </summary>

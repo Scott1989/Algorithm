@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.Graph
+namespace Algorithm.GraphSpace
 {
     /// <summary>
     /// 有向图中环检测算法

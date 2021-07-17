@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.Graph
+namespace Algorithm.GraphSpace
 {
     /// <summary>
     /// CC类用于统计图中的联通分量数量，及每个联通分量中的节点编号
