@@ -27,15 +27,7 @@ namespace StdRandom
     {
         public static List<int>  GenerateInt(int count)
         {
-            return new RandomSet().Take(count).ToList();
-        }
-
-        public static void GenerateIntToFile(int count, string filePath)
-        {
-            List<int> result = GenerateInt(count);
-         
+            return new RandomSet().Take(count).Select(m=>m%count).ToList();
         }
     }
-
-  
 }
