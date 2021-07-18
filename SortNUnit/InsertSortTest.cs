@@ -8,5 +8,6 @@ namespace SortNUnit
 {
     class InsertSortTest
     {
+
     }
 }

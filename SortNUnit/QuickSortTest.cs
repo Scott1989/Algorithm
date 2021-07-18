@@ -7,24 +7,64 @@ using System.Collections.Generic;
 namespace SortNUnit
 {
     public class QuickSortTest
-    {
-        private List<TestItem> items;
-
+    {  
         [SetUp]
         public void Setup()
-        {
-            string filePath = "SortData\\1WInt.txt";
-            List<string> strings = TxtWorker.ReadAllLines(filePath);
-            items = DataParser.StringsToTestItems(strings);
+        {      
         }
 
         [Test]
-        public void SortTest()
+        public void QuickSortTest_1W()
         {
-            QuickSort quickSort = new QuickSort();
-            quickSort.Sort(items.ToArray());
+            string filePath = "SortData\\1WInt.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
 
-            Assert.IsTrue(quickSort.IsSorted(items.ToArray()));
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
         }
+
+        [Test]
+        public void QuickSortTest_10W()
+        {
+            string filePath = "SortData\\10WInt.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+        [Test]
+        public void QuickSortTest_100W()
+        {
+            string filePath = "SortData\\100WInt.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+        [Test]
+        public void QuickSortTest_1000W()
+        {
+            string filePath = "SortData\\1000WInt.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+
     }
 }
