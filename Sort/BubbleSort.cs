@@ -17,12 +17,12 @@ namespace Algorithm.SortSpace
             int N = a.Length;
             for(int i = 0; i < N-1; i++)
             {
-                for(int j = i+1; j < N; j++)
+                for(int j = 0; j < N-i-1; j++)
                 {
-                    //a[i] > a[j]，将两个元素进行交换，大数据后移
-                    if (Bigger(a[i], a[j]))
+                    //a[j] > a[j+1]，将两个元素进行交换，大数据后移
+                    if (Bigger(a[j], a[j+1]))
                     {
-                        Exch(a, i, j);
+                        Exch(a, j, j+1);
                     }
                 }
             }
