@@ -43,7 +43,7 @@ namespace StdIO
             return ints;
         }
 
-        public static List<TestItem> StringsToTestItems(List<string> strings)
+        public static TestItem[] StringsToTestItems(List<string> strings)
         {
             List<TestItem> items = new List<TestItem>();
             List<int> ints = new List<int>();
@@ -59,7 +59,7 @@ namespace StdIO
                 items.Add(item);
             }
 
-            return items;
+            return items.ToArray();
         }
 
 
