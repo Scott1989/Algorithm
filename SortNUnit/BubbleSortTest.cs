@@ -17,6 +17,46 @@ namespace SortNUnit
         }
 
         [Test]
+        public void BubbleSortTest_10()
+        {
+            string filePath = "SortData\\10Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            BubbleSort bubbleSort = new BubbleSort();
+            bubbleSort.Sort(items);
+
+            Assert.IsTrue(bubbleSort.IsSorted(items));
+        }
+
+        [Test]
+        public void BubbleSortTest_100()
+        {
+            string filePath = "SortData\\100Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            BubbleSort bubbleSort = new BubbleSort();
+            bubbleSort.Sort(items);
+
+            Assert.IsTrue(bubbleSort.IsSorted(items));
+        }
+
+        [Test]
+        public void BubbleSortTest_1000()
+        {
+            string filePath = "SortData\\1000Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            BubbleSort bubbleSort = new BubbleSort();
+            bubbleSort.Sort(items);
+
+            Assert.IsTrue(bubbleSort.IsSorted(items));
+        }
+
+
+        [Test]
         public void BubbleSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";

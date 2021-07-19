@@ -14,6 +14,47 @@ namespace SortNUnit
         }
 
         [Test]
+        public void MergeSortTest_10()
+        {
+            string filePath = "SortData\\10Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            MergeSort mergeSort = new MergeSort();
+            mergeSort.Sort(items);
+
+            Assert.IsTrue(mergeSort.IsSorted(items));
+        }
+
+        [Test]
+        public void MergeSortTest_100()
+        {
+            string filePath = "SortData\\100Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            MergeSort mergeSort = new MergeSort();
+            mergeSort.Sort(items);
+
+            Assert.IsTrue(mergeSort.IsSorted(items));
+        }
+
+        [Test]
+        public void MergeSortTest_1000()
+        {
+            string filePath = "SortData\\1000Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            MergeSort mergeSort = new MergeSort();
+            mergeSort.Sort(items);
+
+            Assert.IsTrue(mergeSort.IsSorted(items));
+        }
+
+
+
+        [Test]
         public void MergeSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";

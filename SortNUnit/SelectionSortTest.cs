@@ -17,6 +17,45 @@ namespace SortNUnit
         }
 
         [Test]
+        public void SelectionSortTest_10()
+        {
+            string filePath = "SortData\\10Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            SelectionSort SelectionSort = new SelectionSort();
+            SelectionSort.Sort(items);
+
+            Assert.IsTrue(SelectionSort.IsSorted(items));
+        }
+
+        [Test]
+        public void SelectionSortTest_100()
+        {
+            string filePath = "SortData\\100Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            SelectionSort SelectionSort = new SelectionSort();
+            SelectionSort.Sort(items);
+
+            Assert.IsTrue(SelectionSort.IsSorted(items));
+        }
+
+        [Test]
+        public void SelectionSortTest_1000()
+        {
+            string filePath = "SortData\\1000Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.Sort(items);
+
+            Assert.IsTrue(selectionSort.IsSorted(items));
+        }
+
+        [Test]
         public void SelectionSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";

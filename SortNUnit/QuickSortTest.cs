@@ -14,6 +14,46 @@ namespace SortNUnit
         }
 
         [Test]
+        public void QuickSortTest_10()
+        {
+            string filePath = "SortData\\10Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+        [Test]
+        public void QuickSortTest_100()
+        {
+            string filePath = "SortData\\100Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+        [Test]
+        public void QuickSortTest_1000()
+        {
+            string filePath = "SortData\\1000Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            QuickSort quickSort = new QuickSort();
+            quickSort.Sort(items);
+
+            Assert.IsTrue(quickSort.IsSorted(items));
+        }
+
+
+        [Test]
         public void QuickSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";

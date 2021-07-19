@@ -17,6 +17,47 @@ namespace SortNUnit
         }
 
         [Test]
+        public void HeapSortTest_10()
+        {
+            string filePath = "SortData\\10Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            HeapSort heapSort = new HeapSort();
+            heapSort.Sort(items);
+
+            Assert.IsTrue(heapSort.IsSorted(items));
+        }
+
+        [Test]
+        public void HeapSortTest_100()
+        {
+            string filePath = "SortData\\100Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            HeapSort heapSort = new HeapSort();
+            heapSort.Sort(items);
+
+            Assert.IsTrue(heapSort.IsSorted(items));
+        }
+
+        [Test]
+        public void HeapSortTest_1000()
+        {
+            string filePath = "SortData\\1000Int.txt";
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = DataParser.StringsToTestItems(strings);
+
+            HeapSort heapSort = new HeapSort();
+            heapSort.Sort(items);
+
+            Assert.IsTrue(heapSort.IsSorted(items));
+        }
+
+
+
+        [Test]
         public void HeapSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";
