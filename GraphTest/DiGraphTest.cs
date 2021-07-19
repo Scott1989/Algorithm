@@ -1,4 +1,4 @@
-﻿using Algorithm.Graph;
+﻿using Algorithm.GraphSpace;
 using NUnit.Framework;
 using System.Collections.Generic;
 

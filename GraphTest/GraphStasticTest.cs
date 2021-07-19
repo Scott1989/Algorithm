@@ -1,4 +1,4 @@
-﻿using Algorithm.Graph;
+﻿using Algorithm.GraphSpace;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -7,12 +7,12 @@ namespace GraphTest
 {
     class GraphStasticTest
     {
-        private Graph g;
+        private Algorithm.GraphSpace.Graph g;
 
         [SetUp]
         public void Setup()
         {
-            g = new Graph(13);
+            g = new Algorithm.GraphSpace.Graph(13);
 
             g.AddEdge(0, 5);
             g.AddEdge(4, 3);

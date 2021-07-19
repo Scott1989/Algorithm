@@ -1,19 +1,16 @@
-﻿using Algorithm.Graph;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 
 namespace GraphTest
 {
     public class CCTest
     {
-        private Graph g;
-        private CC c;
+        private Algorithm.GraphSpace.Graph g;
+        private Algorithm.GraphSpace.CC c;
 
         [SetUp]
         public void Setup()
         {
-            g = new Graph(13);
+            g = new Algorithm.GraphSpace.Graph(13);
 
             g.AddEdge(0, 5);
             g.AddEdge(4, 3);
@@ -29,7 +26,7 @@ namespace GraphTest
             g.AddEdge(9, 11);
             g.AddEdge(5, 3);
 
-            c = new CC(g);
+            c = new Algorithm.GraphSpace.CC(g);
         }
 
         [Test]
@@ -80,6 +77,5 @@ namespace GraphTest
             Assert.IsTrue(c.GetConnId(11) == 3);
             Assert.IsTrue(c.GetConnId(12) == 3);
         }
-
     }
 }

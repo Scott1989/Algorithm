@@ -1,4 +1,3 @@
-using Algorithm.Graph;
 using NUnit.Framework;
 using System.Collections.Generic;
 
@@ -6,12 +5,12 @@ namespace GraphTest
 {
     public class GraphTest
     {
-        private Graph g;
+        private Algorithm.GraphSpace.Graph g;
 
         [SetUp]
         public void Setup()
         {
-            g = new Graph(13);
+            g = new Algorithm.GraphSpace.Graph(13);
 
             g.AddEdge(0, 5);
             g.AddEdge(4, 3);
