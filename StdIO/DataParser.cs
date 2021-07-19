@@ -62,6 +62,29 @@ namespace StdIO
             return items.ToArray();
         }
 
+        /// <summary>
+        /// 检测两个TestItem数组是否完全一致
+        /// </summary>
+        /// <param name="items1">数组1</param>
+        /// <param name="items2">数组2</param>
+        /// <returns></returns>
+        public static bool IsTestItemsSame(TestItem[] items1, TestItem[] items2)
+        {
+            if (items1.Length != items2.Length)
+            {
+                return false;
+            }
+
+            for(int i = 0; i < items1.Length; i++)
+            {
+                if (items1[i].CompareTo(items2[i]) != 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 
     }
 }

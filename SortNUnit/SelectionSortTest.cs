@@ -23,10 +23,10 @@ namespace SortNUnit
             List<string> strings = TxtWorker.ReadAllLines(filePath);
             TestItem[] items = DataParser.StringsToTestItems(strings);
 
-            SelectionSort SelectionSort = new SelectionSort();
-            SelectionSort.Sort(items);
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.Sort(items);
 
-            Assert.IsTrue(SelectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsSorted(items));
         }
 
         [Test]
@@ -36,10 +36,10 @@ namespace SortNUnit
             List<string> strings = TxtWorker.ReadAllLines(filePath);
             TestItem[] items = DataParser.StringsToTestItems(strings);
 
-            SelectionSort SelectionSort = new SelectionSort();
-            SelectionSort.Sort(items);
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.Sort(items);
 
-            Assert.IsTrue(SelectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsSorted(items));
         }
 
         [Test]
@@ -62,10 +62,10 @@ namespace SortNUnit
             List<string> strings = TxtWorker.ReadAllLines(filePath);
             TestItem[] items = DataParser.StringsToTestItems(strings);
 
-            SelectionSort SelectionSort = new SelectionSort();
-            SelectionSort.Sort(items);
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.Sort(items);
 
-            Assert.IsTrue(SelectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsSorted(items));
         }
 
         [Test]
@@ -75,13 +75,13 @@ namespace SortNUnit
             List<string> strings = TxtWorker.ReadAllLines(filePath);
             TestItem[] items = DataParser.StringsToTestItems(strings);
 
-            SelectionSort SelectionSort = new SelectionSort();
-            SelectionSort.Sort(items);
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.Sort(items);
 
-            Assert.IsTrue(SelectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsSorted(items));
         }
 
-        [Test]
+     /*   [Test]
         public void SelectionSortTest_100W()
         {
             string filePath = "SortData\\100WInt.txt";
@@ -105,6 +105,6 @@ namespace SortNUnit
             selectionSort.Sort(items);
 
             Assert.IsTrue(selectionSort.IsSorted(items));
-        }
+        }*/
     }
 }
