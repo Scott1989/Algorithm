@@ -33,7 +33,7 @@ namespace SortNUnit
         }
 
         [Test]
-        public void InsertSortTest_100()
+        public void MergeSortTest_100()
         {
             string filePath = "SortData\\100Int.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
@@ -49,7 +49,7 @@ namespace SortNUnit
         }
 
         [Test]
-        public void InsertSortTest_1000()
+        public void MergeSortTest_1000()
         {
             string filePath = "SortData\\1000Int.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
@@ -67,7 +67,7 @@ namespace SortNUnit
 
 
         [Test]
-        public void InsertSortTest_1W()
+        public void MergeSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
@@ -83,7 +83,7 @@ namespace SortNUnit
         }
 
         [Test]
-        public void InsertSortTest_10W()
+        public void MergeSortTest_10W()
         {
             string filePath = "SortData\\10WInt.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
@@ -99,7 +99,7 @@ namespace SortNUnit
         }
 
       /*  [Test]
-        public void InsertSortTest_100W()
+        public void MergeSortTest_100W()
         {
             string filePath = "SortData\\100WInt.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
@@ -112,7 +112,7 @@ namespace SortNUnit
         }
 
         [Test]
-        public void InsertSortTest_1000W()
+        public void MergeSortTest_1000W()
         {
             string filePath = "SortData\\1000WInt.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
