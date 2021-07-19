@@ -27,7 +27,7 @@ namespace Algorithm.SortSpace
             for(int gap = N/2; gap > 0; gap = gap/2)
             {
                //针对每个小数组，使用冒泡排序，保证每个段有序
-                for(int i = 0; i <= N/gap; i += gap)
+                for(int i = 0; i <= N; i += gap)
                 {
                     for(int j = i+gap; j < N; j += gap)
                     {
@@ -48,15 +48,16 @@ namespace Algorithm.SortSpace
             //逐渐缩小步长，从数组长度的一半，缩小到1
             for(int gap = N/2; gap > 0; gap = gap/2)
             {
-                //针对每个小数组，使用插入排序，保证每个段有序
-                for(int i = gap; i <= N/gap; i += gap)
+                //针对每个间隔小数组，使用插入排序，保证每个段有序
+                for(int i = gap; i < N; i += gap)
                 {
                     //a[i] >= a[i-gap],无需调整
                     if (!Less(a[i], a[i-gap]))  continue;
 
+                    //a[i] < a[i-gap], 非有序状态，进行排序
                     IComparable tmp = a[i];
                     int m = i;
-                    while(Less(tmp, a[m-gap]))
+                    while(m-gap >= 0 &&Less(tmp, a[m-gap]))
                     {
                         a[m] = a[m-gap];
                         m -= gap;
