@@ -13,9 +13,25 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
-            List<int> result = RandomGeneration.GenerateInt(10000);
-            string filePath = "1WInt.txt";
+            List<int> result = RandomGeneration.GenerateInt(10);
+            string filePath = "10Int.txt";
             List<string> strResult = DataParser.IntsToStrings(result);
+            TxtWorker.AppendLines(filePath, strResult);
+
+            result = RandomGeneration.GenerateInt(100);
+            filePath = "100Int.txt";
+            strResult = DataParser.IntsToStrings(result);
+            TxtWorker.AppendLines(filePath, strResult);
+
+           result = RandomGeneration.GenerateInt(1000);
+             filePath = "1000Int.txt";
+            strResult = DataParser.IntsToStrings(result);
+            TxtWorker.AppendLines(filePath, strResult);
+
+            /*
+             result = RandomGeneration.GenerateInt(10000);
+            filePath = "1WInt.txt";
+            strResult = DataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
 
@@ -34,7 +50,7 @@ namespace Algorithm
             strResult = DataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
-            /* List<int> result = RandomGeneration.GenerateInt(100);
+             List<int> result = RandomGeneration.GenerateInt(100);
              IComparable[] testList_BubbleSort = new IComparable[result.Count];
              IComparable[] testList_QuickSort = new IComparable[result.Count];
              IComparable[] testList_SelectionSort = new IComparable[result.Count];
@@ -135,6 +151,7 @@ namespace Algorithm
            bst.DeleteMax();
 */
 
+            
             Console.ReadLine();
 
         }
