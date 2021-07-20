@@ -45,6 +45,11 @@ namespace StdIO
 
         public static TestItem[] StringsToTestItems(List<string> strings)
         {
+            if (strings == null || strings.Count == 0)
+            {
+                return null;
+            }
+
             List<TestItem> items = new List<TestItem>();
             List<int> ints = new List<int>();
             foreach (var data in strings)
