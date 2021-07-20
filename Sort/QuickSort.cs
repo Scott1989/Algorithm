@@ -15,7 +15,44 @@ namespace Algorithm.SortSpace
     {
         public void Sort(IComparable[] a)
         {
-            Sort(a, 0, a.Length-1);
+            //            Sort(a, 0, a.Length-1);
+            SortNoRecursive(a, 0, a.Length - 1);
+        }
+
+        /// <summary>
+        /// 采用非递归方式进行快速排序
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="lo"></param>
+        /// <param name="hi"></param>
+        private void SortNoRecursive(IComparable[] a, int lo, int hi)
+        {
+            if (hi <= lo) return;
+
+            //用栈来模拟递归调用过程
+            Stack<int> s = new Stack<int>();
+            s.Push(lo);
+            s.Push(hi);
+
+            
+            while(s.Count() > 0)
+            {
+                int hiTmp = s.Pop();
+                int loTmp = s.Pop();
+                int kTmp = Partition_2(a, loTmp, hiTmp);
+
+                if (loTmp < kTmp)
+                {
+                    s.Push(loTmp);
+                    s.Push(kTmp - 1);
+                }
+
+                if (kTmp < hiTmp)
+                {
+                    s.Push(kTmp + 1);
+                    s.Push(hiTmp);
+                }
+            }
         }
 
         private void Sort(IComparable[] a, int lo,  int hi)
@@ -93,7 +130,6 @@ namespace Algorithm.SortSpace
                     Exch(a, begin, end);
                     begin++;
                     end--;
-                    Show(a);
                 }
             }
 
