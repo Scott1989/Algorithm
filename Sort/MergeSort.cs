@@ -15,9 +15,8 @@ namespace Algorithm.SortSpace
         public void Sort(IComparable[] a)
         {
            int N = a.Length;
-           Sort(a, 0, N-1);
+            Sort(a, 0, N-1);
         }
-
 
         /// <summary>
         /// 采用递归的方式，将数据对半切分进行同类排序，最后将其合并为大的有序数组
@@ -89,6 +88,9 @@ namespace Algorithm.SortSpace
             {
                 a[m] = b[m-i];
             }
+
+            //将数组b引用置为空，触发垃圾回收
+            b = null;
         }
     }
 }
