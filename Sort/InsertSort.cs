@@ -31,7 +31,8 @@ namespace Algorithm.SortSpace
                     j--;
                 }
 
-                a[j] = tmp;
+                //若j和i相等，说明没有发生数据移动
+                if (j != i) a[j] = tmp;
             }
         }
     }
