@@ -98,7 +98,7 @@ namespace SortNUnit
             Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
         }
 
-     /*   [Test]
+       [Test]
         public void QuickSortTest_100W()
         {
             string filePath = "SortData\\100WInt.txt";
@@ -110,18 +110,18 @@ namespace SortNUnit
 
             Assert.IsTrue(quickSort.IsSorted(items));
         }
+       
+       [Test]
+       public void QuickSortTest_1000W()
+       {
+           string filePath = "SortData\\1000WInt.txt";
+           List<string> strings = TxtWorker.ReadAllLines(filePath);
+           TestItem[] items = DataParser.StringsToTestItems(strings);
 
-        [Test]
-        public void QuickSortTest_1000W()
-        {
-            string filePath = "SortData\\1000WInt.txt";
-            List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+           QuickSort quickSort = new QuickSort();
+           quickSort.Sort(items);
 
-            QuickSort quickSort = new QuickSort();
-            quickSort.Sort(items);
-
-            Assert.IsTrue(quickSort.IsSorted(items));
-        }*/
+           Assert.IsTrue(quickSort.IsSorted(items));
+       }
     }
 }
