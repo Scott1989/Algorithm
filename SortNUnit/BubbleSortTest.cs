@@ -22,11 +22,13 @@ namespace SortNUnit
             //读取10个数据项测试用例的原始数据
             string filePath = "SortData\\10Int.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            Assert.IsTrue(items != null && items.Count() > 0);
 
 
             //读取已排序的10个数据项测试用例原始数据
             string sortedFilePath = "SortData\\10IntSorted.txt";
             TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            Assert.IsTrue(sortedItems != null && sortedItems.Count() > 0);
 
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
@@ -40,10 +42,11 @@ namespace SortNUnit
         {
             string filePath = "SortData\\100Int.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            Assert.IsTrue(items != null && items.Count() > 0);
 
             string sortedFilePath = "SortData\\100IntSorted.txt";
             TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
-
+            Assert.IsTrue(sortedItems != null && sortedItems.Count() > 0);
 
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
@@ -57,10 +60,11 @@ namespace SortNUnit
         {
             string filePath = "SortData\\1000Int.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            Assert.IsTrue(items != null && items.Count() > 0);
 
             string sortedFilePath = "SortData\\1000IntSorted.txt";
             TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
-
+            Assert.IsTrue(sortedItems != null && sortedItems.Count() > 0);
 
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
@@ -76,10 +80,11 @@ namespace SortNUnit
         {
             string filePath = "SortData\\1WInt.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            Assert.IsTrue(items != null && items.Count() > 0);
 
             string sortedFilePath = "SortData\\1WIntSorted.txt";
             TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
-
+            Assert.IsTrue(sortedItems != null && sortedItems.Count() > 0);
 
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
@@ -93,9 +98,11 @@ namespace SortNUnit
         {
             string filePath = "SortData\\10WInt.txt";
             TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            Assert.IsTrue(items != null && items.Count() > 0);
 
             string sortedFilePath = "SortData\\10WIntSorted.txt";
             TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            Assert.IsTrue(sortedItems != null && sortedItems.Count() > 0);
 
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
