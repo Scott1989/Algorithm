@@ -15,6 +15,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Graph\Graph.csproj" />
+    <ProjectReference Include="..\StdIO\StdIO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GraphData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="GraphData\GraphData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
