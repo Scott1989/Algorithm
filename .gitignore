@@ -18,7 +18,6 @@ ST/obj/Debug/net5.0/ST.GeneratedMSBuildEditorConfig.editorconfig
 StdDraw/obj/Debug/net5.0/StdDraw.csproj.FileListAbsolute.txt
 StdDraw/obj/Debug/net5.0/StdDraw.csprojAssemblyReference.cache
 ST/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
-*.txt
 *.testlog
 *.manifest
 *.assets.json
