@@ -77,16 +77,6 @@ namespace StdIO
             }
         }
 
-        /// <summary>
-        /// 将指定路径的文件，转为TestItem格式的数组
-        /// </summary>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
-        public static TestItem[] ReadWithTestItemFormat(string filePath)
-        {
-            List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
-            return items;
-        }
+
     }
 }

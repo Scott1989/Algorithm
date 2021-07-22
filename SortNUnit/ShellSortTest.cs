@@ -20,48 +20,48 @@ namespace SortNUnit
         public void ShellSortTest_10()
         {
             string filePath = "SortData\\10Int.txt";
-            TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            TestItem[] items = SortDataParser.GetTestItems(filePath);
 
             string sortedFilePath = "SortData\\10IntSorted.txt";
-            TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            TestItem[] sortedItems = SortDataParser.GetTestItems(sortedFilePath);
 
             ShellSort shellSort = new ShellSort();
             shellSort.Sort(items);
 
             Assert.IsTrue(shellSort.IsSorted(items));
-            Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
+            Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
         [Test]
         public void ShellSortTest_100()
         {
             string filePath = "SortData\\100Int.txt";
-            TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            TestItem[] items = SortDataParser.GetTestItems(filePath);
 
             string sortedFilePath = "SortData\\100IntSorted.txt";
-            TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            TestItem[] sortedItems = SortDataParser.GetTestItems(sortedFilePath);
 
             ShellSort shellSort = new ShellSort();
             shellSort.Sort(items);
 
             Assert.IsTrue(shellSort.IsSorted(items));
-            Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
+            Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
         [Test]
         public void ShellSortTest_1000()
         {
             string filePath = "SortData\\1000Int.txt";
-            TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            TestItem[] items = SortDataParser.GetTestItems(filePath);
 
             string sortedFilePath = "SortData\\1000IntSorted.txt";
-            TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            TestItem[] sortedItems = SortDataParser.GetTestItems(sortedFilePath);
 
             ShellSort shellSort = new ShellSort();
             shellSort.Sort(items);
 
             Assert.IsTrue(shellSort.IsSorted(items));
-            Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
+            Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
 
@@ -70,32 +70,32 @@ namespace SortNUnit
         public void ShellSortTest_1W()
         {
             string filePath = "SortData\\1WInt.txt";
-            TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            TestItem[] items = SortDataParser.GetTestItems(filePath);
 
             string sortedFilePath = "SortData\\1WIntSorted.txt";
-            TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            TestItem[] sortedItems = SortDataParser.GetTestItems(sortedFilePath);
 
             ShellSort shellSort = new ShellSort();
             shellSort.Sort(items);
 
             Assert.IsTrue(shellSort.IsSorted(items));
-            Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
+            Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
         [Test]
         public void ShellSortTest_10W()
         {
             string filePath = "SortData\\10WInt.txt";
-            TestItem[] items = TxtWorker.ReadWithTestItemFormat(filePath);
+            TestItem[] items = SortDataParser.GetTestItems(filePath);
 
             string sortedFilePath = "SortData\\10WIntSorted.txt";
-            TestItem[] sortedItems = TxtWorker.ReadWithTestItemFormat(sortedFilePath);
+            TestItem[] sortedItems = SortDataParser.GetTestItems(sortedFilePath);
 
             ShellSort shellSort = new ShellSort();
             shellSort.Sort(items);
 
             Assert.IsTrue(shellSort.IsSorted(items));
-            Assert.IsTrue(DataParser.IsTestItemsSame(sortedItems, items));
+            Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
      /*   [Test]

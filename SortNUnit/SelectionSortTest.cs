@@ -21,7 +21,7 @@ namespace SortNUnit
         {
             string filePath = "SortData\\10Int.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
 
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
@@ -34,7 +34,7 @@ namespace SortNUnit
         {
             string filePath = "SortData\\100Int.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
 
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
@@ -47,7 +47,7 @@ namespace SortNUnit
         {
             string filePath = "SortData\\1000Int.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
 
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
@@ -60,7 +60,7 @@ namespace SortNUnit
         {
             string filePath = "SortData\\1WInt.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
 
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
@@ -73,7 +73,7 @@ namespace SortNUnit
         {
             string filePath = "SortData\\10WInt.txt";
             List<string> strings = TxtWorker.ReadAllLines(filePath);
-            TestItem[] items = DataParser.StringsToTestItems(strings);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
 
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);

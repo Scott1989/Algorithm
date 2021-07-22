@@ -7,10 +7,24 @@ using System.Threading.Tasks;
 namespace StdIO
 {
     /// <summary>
-    /// 负责不同数据之间的格式转换
+    /// 排序用数据格式转换器
+    /// 将从文本文件中读取的字符串，转换为TestItem数组
     /// </summary>
-    public static class DataParser
+    public static class SortDataParser
     {
+        /// <summary>
+        /// 将指定路径的文件，转为TestItem格式的数组
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public static TestItem[] GetTestItems(string filePath)
+        {
+            List<string> strings = TxtWorker.ReadAllLines(filePath);
+            TestItem[] items = SortDataParser.StringsToTestItems(strings);
+            return items;
+        }
+
+
         /// <summary>
         /// 将整数数组转换为字符串数组
         /// </summary>
