@@ -15,17 +15,17 @@ namespace Algorithm
         {
             List<int> result = RandomGeneration.GenerateInt(10);
             string filePath = "10Int.txt";
-            List<string> strResult = DataParser.IntsToStrings(result);
+            List<string> strResult = SortDataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
             result = RandomGeneration.GenerateInt(100);
             filePath = "100Int.txt";
-            strResult = DataParser.IntsToStrings(result);
+            strResult = SortDataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
            result = RandomGeneration.GenerateInt(1000);
              filePath = "1000Int.txt";
-            strResult = DataParser.IntsToStrings(result);
+            strResult = SortDataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
             /*
