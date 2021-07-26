@@ -11,7 +11,13 @@ namespace StdDraw
     /// </summary>
     public class Line
     {
-        public Point start { get; set; }
+        public Point begin { get; set; }
         public Point end { get; set; }
+
+        public Line(Point begin, Point end)
+        {
+            this.begin = begin;
+            this.end = end;
+        }
     }
 }

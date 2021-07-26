@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace StdDraw
 {
     /// <summary>
-    /// 圆行表示
+    /// 绘图上下文环境
+    /// 线条粒度
+    /// 字体大小
+    /// 
     /// </summary>
-    public class Circle
+    public class DrawContext
     {
-        public Point p { get; set; }  //圆心坐标
-
-        public float r { get; set; }      //圆的半径
     }
 }

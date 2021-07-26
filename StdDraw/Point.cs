@@ -7,9 +7,9 @@ namespace StdDraw
     /// </summary>
     public class Point
     {
-        public int x { get; set; }
+        public float x { get; set; }
 
-        public int y { get; set; }
+        public float y { get; set; }
 
 
     }
