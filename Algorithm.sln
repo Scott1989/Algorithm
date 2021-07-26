@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STNUnit", "STNUnit\STNUnit.csproj", "{010835EE-8BF4-4E8A-ADF1-458FA1378EB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphTest", "GraphTest\GraphTest.csproj", "{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphNUnit", "GraphTest\GraphNUnit.csproj", "{1DBC3F7B-D361-4507-8CFF-BF2DBDEFCA83}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortNUnit", "SortNUnit\SortNUnit.csproj", "{8A9AE654-DCBC-464D-8721-74C796B81CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdIO", "StdIO\StdIO.csproj", "{35B85370-7D78-4F69-A448-D2971EFE0CF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StdIO", "StdIO\StdIO.csproj", "{35B85370-7D78-4F69-A448-D2971EFE0CF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
