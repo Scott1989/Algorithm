@@ -1,5 +1,6 @@
 ﻿using Algorithm.GraphSpace;
 using NUnit.Framework;
+using StdIO;
 using System;
 using System.Collections.Generic;
 
@@ -13,33 +14,8 @@ namespace GraphTest
         [SetUp]
         public void Setup()
         {
-            g = new DiGraph(13);
-
-            g.AddEdge(4, 2);
-            g.AddEdge(2, 3);
-            g.AddEdge(3, 2);
-            g.AddEdge(6, 0);
-            g.AddEdge(0, 1);
-            g.AddEdge(2, 0);
-            g.AddEdge(11, 12);
-            g.AddEdge(12, 9);
-            g.AddEdge(9, 10);
-            g.AddEdge(9, 11);
-            g.AddEdge(8, 9);
-            g.AddEdge(10, 12);
-            g.AddEdge(11, 4);
-
-            g.AddEdge(4, 3);
-            g.AddEdge(3, 5);
-            g.AddEdge(7, 8);
-            g.AddEdge(8, 7);
-            g.AddEdge(5, 4);
-            g.AddEdge(0, 5);
-            g.AddEdge(6, 4);
-
-            g.AddEdge(6, 9);
-            g.AddEdge(7, 6);
-
+            //测试用例文件 TinyDG.txt
+            g = GraphDataParser.GetDiGraph("GraphData\\TinyDG.txt");
             dc = new DirectedCycle(g);
         }
 

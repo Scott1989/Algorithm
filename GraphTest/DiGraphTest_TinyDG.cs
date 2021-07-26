@@ -1,45 +1,19 @@
 ﻿using Algorithm.GraphSpace;
 using NUnit.Framework;
+using StdIO;
 using System.Collections.Generic;
 
 namespace GraphTest
 {
-    public class DiGraphTest
+    public class DiGraphTest_TinyDG
     {
         private DiGraph g;
 
         [SetUp]
         public void Setup()
         {
-            //https://algs4.cs.princeton.edu/42digraph/
-            //测试用的图例来自上文链接
-
-            g = new DiGraph(13);
-
-            g.AddEdge(4, 2);
-            g.AddEdge(2, 3);
-            g.AddEdge(3, 2);
-            g.AddEdge(6, 0);
-            g.AddEdge(0, 1);
-            g.AddEdge(2, 0);
-            g.AddEdge(11, 12);
-            g.AddEdge(12, 9);
-            g.AddEdge(9, 10);
-            g.AddEdge(9, 11);
-            g.AddEdge(8, 9);
-            g.AddEdge(10, 12);
-            g.AddEdge(11, 4);
-
-            g.AddEdge(4, 3);
-            g.AddEdge(3, 5);
-            g.AddEdge(7, 8);
-            g.AddEdge(8, 7);
-            g.AddEdge(5, 4);
-            g.AddEdge(0, 5);
-            g.AddEdge(6, 4);
-
-            g.AddEdge(6, 9);
-            g.AddEdge(7, 6);
+            //测试用例文件 TinyDG.txt
+            g = GraphDataParser.GetDiGraph("GraphData\\TinyDG.txt");
         }
 
         [Test]

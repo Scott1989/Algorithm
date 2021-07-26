@@ -19,11 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GraphData\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="GraphData\GraphData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GraphData\MediumDG.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GraphData\TinyDG.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithm.GraphSpace;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,29 @@ namespace StdIO
             for(int i = 1; i < lines.Count; i++)
             {
                 string line = lines[i];
-                string[] peers = line.Split(",");
+                string[] peers = line.Split(" ");
+                peers = peers.Where(peer => string.IsNullOrEmpty(peer) == false).ToArray();
+                int begin = int.Parse(peers[0]);
+                int end = int.Parse(peers[1]);
+
+                g.AddEdge(begin, end);
+            }
+
+            return g;
+        }
+
+        public static DiGraph GetDiGraph(string filePath)
+        {
+            List<string> lines = TxtWorker.ReadAllLines(filePath);
+            lines = lines.Where(line => (string.IsNullOrEmpty(line)) == false).ToList();
+
+            int V = int.Parse(lines[0]);
+            DiGraph g = new DiGraph(V);
+
+            for (int i = 1; i < lines.Count; i++)
+            {
+                string line = lines[i];
+                string[] peers = line.Split(" ");
                 peers = peers.Where(peer => string.IsNullOrEmpty(peer) == false).ToArray();
                 int begin = int.Parse(peers[0]);
                 int end = int.Parse(peers[1]);
