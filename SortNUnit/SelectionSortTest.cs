@@ -1,4 +1,4 @@
-﻿using Algorithm.SortSpace;
+﻿using Algorithm.Sort;
 using NUnit.Framework;
 using StdIO;
 using System;
@@ -26,7 +26,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
         [Test]
@@ -52,7 +52,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
         [Test]
@@ -65,7 +65,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
      /*   [Test]
@@ -91,7 +91,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }
 
         [Test]
@@ -104,7 +104,7 @@ namespace SortNUnit
             SelectionSort selectionSort = new SelectionSort();
             selectionSort.Sort(items);
 
-            Assert.IsTrue(selectionSort.IsSorted(items));
+            Assert.IsTrue(selectionSort.IsAscSorted(items));
         }*/
     }
 }

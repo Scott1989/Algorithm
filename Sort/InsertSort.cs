@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 插入排序
@@ -12,7 +12,7 @@ namespace Algorithm.SortSpace
     /// </summary>
     public class InsertSort : ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
             int N = a.Length;
             for (int i = 1; i < N; i++)

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     //基数排序
     public class RadixSort:ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
           
         }

@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 合并排序
     /// 排序思想：合并排序采用分治方法，对数组左半边使用合并排序，对数据右边使用合并排序，两边都有序后再合并成新的大有序数组
+    /// 基于比较思想的一种排序
     /// </summary>
     public class MergeSort : ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
            int N = a.Length;
             Sort(a, 0, N-1);
@@ -37,6 +38,7 @@ namespace Algorithm.SortSpace
         /// </summary>
         private void Merge(IComparable[] a, int i, int j, int k)
         {
+            //待合并的第二个数组为空，无需合并
             if (j == k) return;
             
             IComparable[] b = new IComparable[k-i+1];
@@ -45,20 +47,20 @@ namespace Algorithm.SortSpace
             int rightIndex = j + 1;
           
 
-            int tmpIndex = 0;
+            int newIndex = 0;
 
             //从左右有序数组中依次挑小的放临时数组
             while(leftIndex <= j && rightIndex <= k)
             {
                 if (Less(a[leftIndex], a[rightIndex]))
                 {
-                    b[tmpIndex] = a[leftIndex];
-                    tmpIndex++;
+                    b[newIndex] = a[leftIndex];
+                    newIndex++;
                     leftIndex++;
                 }else
                 {
-                    b[tmpIndex] = a[rightIndex];
-                    tmpIndex++;
+                    b[newIndex] = a[rightIndex];
+                    newIndex++;
                     rightIndex++;
                 }
             }
@@ -68,8 +70,8 @@ namespace Algorithm.SortSpace
             {
                 for(int m = leftIndex; m <= j; m++)
                 {
-                    b[tmpIndex] = a[m];
-                    tmpIndex++;
+                    b[newIndex] = a[m];
+                    newIndex++;
                 }
             }
 
@@ -78,8 +80,8 @@ namespace Algorithm.SortSpace
             {
                 for(int m = rightIndex; m <= k; m++)
                 {
-                    b[tmpIndex] = a[m];
-                    tmpIndex++;
+                    b[newIndex] = a[m];
+                    newIndex++;
                 }
             }
 

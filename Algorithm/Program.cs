@@ -1,4 +1,4 @@
-﻿using Algorithm.SortSpace;
+﻿using Algorithm.Sort;
 using Algorithm.ST;
 using StdIO;
 using StdRandom;
@@ -6,12 +6,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-
 namespace Algorithm
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             List<int> result = RandomGeneration.GenerateInt(10);
             string filePath = "10Int.txt";
@@ -23,8 +22,8 @@ namespace Algorithm
             strResult = SortDataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
-           result = RandomGeneration.GenerateInt(1000);
-             filePath = "1000Int.txt";
+            result = RandomGeneration.GenerateInt(1000);
+            filePath = "1000Int.txt";
             strResult = SortDataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
 
@@ -33,7 +32,6 @@ namespace Algorithm
             filePath = "1WInt.txt";
             strResult = DataParser.IntsToStrings(result);
             TxtWorker.AppendLines(filePath, strResult);
-
 
            result = RandomGeneration.GenerateInt(100000);
             filePath = "10WInt.txt";
@@ -59,7 +57,6 @@ namespace Algorithm
              IComparable[] testList_MergeSort = new IComparable[result.Count];
              IComparable[] testList_ShellSort = new IComparable[result.Count];
 
-
            for (int i = 0; i < testList_BubbleSort.Length; i++)
               {
                   TestData test = new TestData(result[i]%100);
@@ -71,7 +68,6 @@ namespace Algorithm
                    testList_MergeSort[i] = test;
                    testList_ShellSort[i] = test;
            }
-
 
         *//*   IComparable[] testList = new IComparable[50];
            for (int i = 0; i < 50; i++)
@@ -99,21 +95,17 @@ namespace Algorithm
            selectSort.Show(testList_SelectionSort);
            Console.WriteLine("SelectionSort end.");
 
-
-
            InsertSort insertSort = new InsertSort();
            Console.WriteLine("InsertSort begin.");
            insertSort.Sort(testList_InsertSort);
            insertSort.Show(testList_InsertSort);
            Console.WriteLine("InsertSort end.");
 
-
            HeapSort heapSort = new HeapSort();
            Console.WriteLine("HeapSort begin.");
            heapSort.Sort(testList_InsertSort);
            heapSort.Show(testList_InsertSort);
            Console.WriteLine("HeapSort end.");
-
 
            MergeSort mergeSort = new MergeSort();
            Console.WriteLine("MergeSort begin.");
@@ -129,8 +121,7 @@ namespace Algorithm
 
            Console.ReadLine();
 
-
-           //       SequentialSearchST<int, string> seqST = new  SequentialSearchST<int, string>();
+           // SequentialSearchST<int, string> seqST = new SequentialSearchST<int, string>();
            BST<int, int> bst = new BST<int, int>();
 
            bst.Put(10, 10);
@@ -141,7 +132,6 @@ namespace Algorithm
            bst.Put(13, 13);
            bst.Put(12, 12);
 
-
            bst.DeleteMax();
            bst.DeleteMax();
            bst.DeleteMax();
@@ -151,9 +141,7 @@ namespace Algorithm
            bst.DeleteMax();
 */
 
-            
             Console.ReadLine();
-
         }
     }
 }

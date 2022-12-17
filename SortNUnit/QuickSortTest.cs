@@ -1,4 +1,4 @@
-using Algorithm.SortSpace;
+using Algorithm.Sort;
 using NUnit.Framework;
 using StdIO;
 using System;
@@ -28,7 +28,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -44,7 +44,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -60,7 +60,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -78,7 +78,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -94,7 +94,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -108,7 +108,7 @@ namespace SortNUnit
             QuickSort quickSort = new QuickSort();
             quickSort.Sort(items);
 
-            Assert.IsTrue(quickSort.IsSorted(items));
+            Assert.IsTrue(quickSort.IsAscSorted(items));
         }
        
        [Test]
@@ -121,7 +121,7 @@ namespace SortNUnit
            QuickSort quickSort = new QuickSort();
            quickSort.Sort(items);
 
-           Assert.IsTrue(quickSort.IsSorted(items));
+           Assert.IsTrue(quickSort.IsAscSorted(items));
        }
     }
 }

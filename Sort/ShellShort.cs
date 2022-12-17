@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 希尔排序
     /// 排序思想：根据步长，讲数据划分为几个小段数组，分别对小段数组排序，通过对步长的控制
     /// 实现数据的全局基本有序，逐步调整到全局有序
     /// </summary>
-    public class ShellSort : ISort
+     public class ShellSort : ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
             Sort_BasedOnInsert(a);
         }

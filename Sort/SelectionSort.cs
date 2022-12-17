@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 选择排序，每次查找数组中的无序部分的最小者，将其放置数据有序部分的结尾处
     /// </summary>
     public class SelectionSort:ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
             int N = a.Length;
             for(int i = 0; i < N; i++)

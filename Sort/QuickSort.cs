@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.SortSpace
+namespace Algorithm.Sort
 {
     /// <summary>
     /// 快速排序
@@ -13,7 +13,7 @@ namespace Algorithm.SortSpace
     /// </summary>
     public class QuickSort:ISort
     {
-        public void Sort(IComparable[] a)
+        new public void Sort(IComparable[] a)
         {
             //            Sort(a, 0, a.Length-1);
             SortNoRecursive(a, 0, a.Length - 1);

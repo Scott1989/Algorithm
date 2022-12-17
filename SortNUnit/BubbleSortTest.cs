@@ -1,4 +1,4 @@
-﻿using Algorithm.SortSpace;
+﻿using Algorithm.Sort;
 using NUnit.Framework;
 using StdIO;
 using System;
@@ -33,7 +33,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -51,7 +51,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -69,7 +69,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
 
         }
@@ -89,7 +89,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -107,7 +107,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
             Assert.IsTrue(SortDataParser.IsTestItemsSame(sortedItems, items));
         }
 
@@ -120,7 +120,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
         }
 
         [Test]
@@ -132,7 +132,7 @@ namespace SortNUnit
             BubbleSort bubbleSort = new BubbleSort();
             bubbleSort.Sort(items);
 
-            Assert.IsTrue(bubbleSort.IsSorted(items));
+            Assert.IsTrue(bubbleSort.IsAscSorted(items));
         }*/
     }
 }
